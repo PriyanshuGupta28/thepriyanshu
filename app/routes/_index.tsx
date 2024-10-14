@@ -125,7 +125,11 @@ export default function Index() {
           Portfolio
         </h1>
       </div>
-      <div className="w-[90%] md:w-[80%] mx-auto">
+      <div
+        className={`w-[90%] md:w-[80%] mx-auto ${
+          !isIntroDone ? "hidden" : "relative"
+        }`}
+      >
         <Timeline />
       </div>
     </div>

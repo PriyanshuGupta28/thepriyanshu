@@ -1,11 +1,13 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const Resume: React.FC = () => {
   const headerRef = useRef(null);
   const sectionsRef = useRef([]);
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.from(headerRef.current, {
       y: -100,
       opacity: 0,
@@ -13,18 +15,21 @@ const Resume: React.FC = () => {
       ease: "power3.out",
     });
 
-    sectionsRef.current.forEach((section, idx) => {
+    sectionsRef.current.forEach((section) => {
       gsap.from(section, {
         scrollTrigger: {
           trigger: section,
-          start: "top 80%",
-          toggleActions: "play none none none",
+          start: "top 90%",
+          end: "bottom 25%",
+          toggleActions: "play reverse play reverse",
+          markers: true,
         },
         opacity: 0,
         y: 50,
         duration: 1,
-        ease: "power3.out",
-        delay: idx * 0.2,
+        ease: "power4.out",
+        delay: 0.3,
+        stagger: 0.5,
       });
     });
   }, []);
@@ -55,11 +60,16 @@ const Resume: React.FC = () => {
       </div>
 
       {/* Experience Section */}
-      <div ref={(el) => (sectionsRef.current[1] = el)} className="my-10">
-        <h2 className="text-3xl font-bold mb-4">Experience</h2>
+      <div className="my-10">
+        <h2
+          className="text-3xl font-bold mb-4"
+          ref={(el) => (sectionsRef.current[1] = el)}
+        >
+          Experience
+        </h2>
 
         {/* Job 1: Bapa sita innovation and technologies */}
-        <div className="mb-8">
+        <div className="mb-8" ref={(el) => (sectionsRef.current[2] = el)}>
           <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
             Front End Developer
           </h3>
@@ -98,7 +108,7 @@ const Resume: React.FC = () => {
         </div>
 
         {/* Job 2: Eshkon */}
-        <div className="mb-8">
+        <div className="mb-8" ref={(el) => (sectionsRef.current[3] = el)}>
           <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
             React.js Developer
           </h3>
@@ -137,7 +147,7 @@ const Resume: React.FC = () => {
         </div>
 
         {/* Job 3: Echnotech Pvt Ltd */}
-        <div className="mb-8">
+        <div className="mb-8" ref={(el) => (sectionsRef.current[4] = el)}>
           <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
             Front End Developer
           </h3>
@@ -177,7 +187,7 @@ const Resume: React.FC = () => {
       </div>
 
       {/* Education Section */}
-      <div ref={(el) => (sectionsRef.current[2] = el)} className="my-10">
+      <div ref={(el) => (sectionsRef.current[5] = el)} className="my-10">
         <h2 className="text-3xl font-bold mb-4">Education</h2>
         <p className="text-gray-700 dark:text-gray-300">
           <span className="font-semibold">
@@ -189,7 +199,7 @@ const Resume: React.FC = () => {
       </div>
 
       {/* Skills Section */}
-      <div ref={(el) => (sectionsRef.current[3] = el)} className="my-10">
+      <div ref={(el) => (sectionsRef.current[6] = el)} className="my-10">
         <h2 className="text-3xl font-bold mb-4">Skills</h2>
         <p className="text-gray-700 dark:text-gray-300">
           HTML5, CSS3, JavaScript, React.js, Next.js, TypeScript, Redux, Sass,

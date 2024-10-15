@@ -16,7 +16,12 @@ export const FloatingDock = ({
   desktopClassName,
   mobileClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: {
+    title: string;
+    icon: React.ReactNode;
+    href: string;
+    target: string;
+  }[];
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
@@ -37,7 +42,7 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("sticky left-3 bottom-5 z-20", className)}>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -112,11 +117,13 @@ function IconContainer({
   title,
   icon,
   href,
+  target,
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
   href: string;
+  target: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -166,7 +173,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link to={href}>
+    <Link to={href} target={target} rel="noreferrer">
       <motion.div
         ref={ref}
         style={{ width, height }}

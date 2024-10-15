@@ -39,6 +39,7 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/",
+      target: "",
     },
     {
       title: "Resume",
@@ -46,6 +47,7 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
         <IconBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/resume",
+      target: "",
     },
     {
       title: "Projects",
@@ -53,6 +55,7 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
         <IconLayoutCollage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/projects",
+      target: "",
     },
     {
       title: "LinkedIn",
@@ -60,6 +63,7 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://www.linkedin.com/in/priyanshu-kumar-581a5a246/",
+      target: "_blank",
     },
     {
       title: "Instagram",
@@ -67,6 +71,7 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
         <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
+      target: "_blank",
     },
     {
       title: "Twitter",
@@ -74,6 +79,7 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://x.com/28Priyanshu2001",
+      target: "_blank",
     },
     {
       title: "GitHub",
@@ -81,6 +87,7 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://github.com/PriyanshuGupta28",
+      target: "_blank",
     },
   ];
 
@@ -89,10 +96,7 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
       ref={navRef}
       className="flex z-20 sticky left-4 md:items-center md:justify-center md:bottom-10 w-full"
     >
-      <FloatingDock
-        mobileClassName="z-20 sticky left-3 bottom-0 size-20"
-        items={links}
-      />
+      <FloatingDock mobileClassName="md:hidden" items={links} />
     </div>
   );
 };

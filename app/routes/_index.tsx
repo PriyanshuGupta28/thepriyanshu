@@ -7,6 +7,9 @@ import { useOutletContext } from "@remix-run/react";
 import Timeline from "~/components/Timeline";
 import HeroSection from "~/components/HeroSection";
 import Skills from "~/components/Skills";
+import { TextRevealByWord } from "~/components/ui/TextRevealByWord";
+import Projects from "~/components/Projects";
+import ContactUs from "~/components/ContactUs";
 
 // Define the context type
 interface ContextType {
@@ -117,8 +120,8 @@ export default function Index() {
         }`}
       >
         <HeroSection />
-        <Timeline />
         <Skills />
+        <Timeline />
       </div>
     </div>
   );

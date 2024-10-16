@@ -2,6 +2,14 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { MetaFunction } from "@remix-run/react";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "The Priyanshu | Resume" },
+    { name: "description", content: "Welcome to The Priyanshu!" },
+  ];
+};
 const Resume: React.FC = () => {
   const headerRef = useRef(null);
   const sectionsRef = useRef([]);
@@ -22,7 +30,7 @@ const Resume: React.FC = () => {
           start: "top 90%",
           end: "bottom 25%",
           toggleActions: "play reverse play reverse",
-          markers: true,
+          // markers: true,
         },
         opacity: 0,
         y: 50,

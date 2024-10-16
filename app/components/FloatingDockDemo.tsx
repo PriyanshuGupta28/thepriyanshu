@@ -94,9 +94,9 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
   return (
     <div
       ref={navRef}
-      className="flex z-20 sticky left-4 md:items-center md:justify-center md:bottom-10 w-full"
+      className="flex z-20 sticky left-4 items-center justify-center bottom-10 w-full"
     >
-      <FloatingDock mobileClassName="md:hidden" items={links} />
+      <FloatingDock items={links} />
     </div>
   );
 };

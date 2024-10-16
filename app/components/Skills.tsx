@@ -14,22 +14,75 @@ import { RiCss3Fill } from "react-icons/ri";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { BiLogoMongodb } from "react-icons/bi";
 import { CgVercel } from "react-icons/cg";
+import { LinkPreview } from "./ui/link-preview";
 
 const Skills: React.FC = () => {
   const skillItems = [
-    { title: "React", icon: <FaReact className="text-blue-500" /> },
-    { title: "Next.js", icon: <TbBrandNextjs className="text-white" /> },
-    { title: "Redux", icon: <TbBrandRedux className="text-purple-600" /> },
-    { title: "JavaScript", icon: <SiJavascript className="text-yellow-500" /> },
-    { title: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
-    { title: "HTML5", icon: <SiHtml5 className="text-orange-500" /> },
-    { title: "CSS3", icon: <RiCss3Fill className="text-blue-500" /> },
-    { title: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-    { title: "Express", icon: <SiExpress className="text-white" /> },
-    { title: "Vite", icon: <SiVite className="text-purple-500" /> },
-    { title: "Remix", icon: <SiRemix className="text-cyan-500" /> },
-    { title: "MongoDB", icon: <BiLogoMongodb className="text-green-600" /> },
-    { title: "Vercel", icon: <CgVercel className="text-white" /> },
+    {
+      title: "React",
+      icon: <FaReact className="text-blue-500" />,
+      link: "https://reactjs.org/",
+    },
+    {
+      title: "Next.js",
+      icon: <TbBrandNextjs className="text-white" />,
+      link: "https://nextjs.org/",
+    },
+    {
+      title: "Redux",
+      icon: <TbBrandRedux className="text-purple-600" />,
+      link: "https://redux.js.org/",
+    },
+    {
+      title: "JavaScript",
+      icon: <SiJavascript className="text-yellow-500" />,
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    },
+    {
+      title: "TypeScript",
+      icon: <SiTypescript className="text-blue-600" />,
+      link: "https://www.typescriptlang.org/",
+    },
+    {
+      title: "HTML5",
+      icon: <SiHtml5 className="text-orange-500" />,
+      link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    },
+    {
+      title: "CSS3",
+      icon: <RiCss3Fill className="text-blue-500" />,
+      link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    },
+    {
+      title: "Node.js",
+      icon: <FaNodeJs className="text-green-500" />,
+      link: "https://nodejs.org/",
+    },
+    {
+      title: "Express",
+      icon: <SiExpress className="text-white" />,
+      link: "https://expressjs.com/",
+    },
+    {
+      title: "Vite",
+      icon: <SiVite className="text-purple-500" />,
+      link: "https://vitejs.dev/",
+    },
+    {
+      title: "Remix",
+      icon: <SiRemix className="text-cyan-500" />,
+      link: "https://remix.run/",
+    },
+    {
+      title: "MongoDB",
+      icon: <BiLogoMongodb className="text-green-600" />,
+      link: "https://www.mongodb.com/",
+    },
+    {
+      title: "Vercel",
+      icon: <CgVercel className="text-white" />,
+      link: "https://vercel.com/",
+    },
   ];
 
   const [items, setItems] = useState(skillItems);
@@ -38,23 +91,25 @@ const Skills: React.FC = () => {
     const shuffleInterval = setInterval(() => {
       const newShuffledItems = lodash.shuffle(items);
       setItems(newShuffledItems);
-    }, 3000); // shuffle every 3 seconds
+    }, 3000); // Shuffle every 3 seconds
 
     return () => clearInterval(shuffleInterval);
   }, [items]);
 
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12 flex flex-col items-center">
       <h2 className="text-4xl font-bold text-center mb-8 text-zinc-100">
         Skills
       </h2>
       <Flipper flipKey={items.map((item) => item.title).join("")}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-6 w-full">
           {items.map((item) => (
             <Flipped key={item.title} flipId={item.title}>
-              <div className="w-[70px] h-[70px] bg-zinc-500 flex flex-col items-center p-4 rounded-lg transition-transform transform hover:scale-105 bg-transparent">
-                <div className="text-4xl mb-2">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-zinc-100">
+              <div className="w-full p-3 gap-1 flex flex-col justify-center items-center">
+                <LinkPreview url={item.link}>
+                  <div className="text-4xl mb-2">{item.icon}</div>
+                </LinkPreview>
+                <h3 className="text-lg font-semibold text-zinc-100 text-center">
                   {item.title}
                 </h3>
               </div>

@@ -13,6 +13,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@lottiefiles/dotlottie-react": "^0.9.1",
+    "@radix-ui/react-hover-card": "^1.1.2",
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",
     "@remix-run/serve": "^2.13.1",
@@ -22,6 +23,7 @@
     "gsap": "^3.12.5",
     "isbot": "^4.1.0",
     "lodash": "^4.17.21",
+    "qss": "^3.0.0",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",

@@ -9,6 +9,13 @@ const HeroSection: React.FC = () => {
         <h1 className="text-3xl md:text-5xl font-bold">
           Hi, my name is Priyanshu Gupta
         </h1>
+        <p className="mt-4 text-base md:text-xl text-zinc-600">
+          I’m a passionate software developer with expertise in building
+          responsive web applications. I enjoy turning complex problems into
+          simple, beautiful, and intuitive designs. Let&apos;s work together to
+          create something amazing!
+        </p>
+        {/* Know More Button */}
       </div>
 
       {/* Lottie Animation */}

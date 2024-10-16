@@ -38,7 +38,7 @@ const Skills: React.FC = () => {
     const shuffleInterval = setInterval(() => {
       const newShuffledItems = lodash.shuffle(items);
       setItems(newShuffledItems);
-    }, 1000); // shuffle every 3 seconds
+    }, 3000); // shuffle every 3 seconds
 
     return () => clearInterval(shuffleInterval);
   }, [items]);
@@ -49,10 +49,10 @@ const Skills: React.FC = () => {
         Skills
       </h2>
       <Flipper flipKey={items.map((item) => item.title).join("")}>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
           {items.map((item) => (
             <Flipped key={item.title} flipId={item.title}>
-              <div className="flex flex-col items-center p-4 rounded-lg transition-transform transform hover:scale-105 bg-transparent">
+              <div className="w-[70px] h-[70px] bg-zinc-500 flex flex-col items-center p-4 rounded-lg transition-transform transform hover:scale-105 bg-transparent">
                 <div className="text-4xl mb-2">{item.icon}</div>
                 <h3 className="text-lg font-semibold text-zinc-100">
                   {item.title}

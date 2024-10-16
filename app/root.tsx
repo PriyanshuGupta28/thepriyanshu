@@ -9,6 +9,7 @@ import type { LinksFunction } from "@remix-run/node";
 import "./tailwind.css";
 import { useState } from "react";
 import FloatingDockDemo from "./components/FloatingDockDemo";
+import Footer from "./components/Footer";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -23,13 +24,7 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export function Layout({
-  children,
-  isIntroDone,
-}: {
-  children: React.ReactNode;
-  isIntroDone: boolean;
-}) {
+export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -39,11 +34,7 @@ export function Layout({
         <Links />
       </head>
       <body>
-        {/* {isIntroDone && <Navbar isIntroDone={isIntroDone} />}
-         */}
-
         {children}
-        {isIntroDone && <FloatingDockDemo isIntroDone={isIntroDone} />}
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -53,9 +44,12 @@ export function Layout({
 
 export default function App() {
   const [isIntroDone, setIsIntroDone] = useState(true);
+  console.log(isIntroDone, "isIntroDone");
   return (
-    <Layout isIntroDone={isIntroDone}>
+    <Layout>
       <Outlet context={{ isIntroDone, setIsIntroDone }} />
+      <Footer isIntroDone={isIntroDone} />
+      <FloatingDockDemo isIntroDone={isIntroDone} />
     </Layout>
   );
 }

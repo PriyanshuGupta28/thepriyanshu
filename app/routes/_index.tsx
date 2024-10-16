@@ -2,10 +2,11 @@ import { useGSAP } from "@gsap/react";
 import type { MetaFunction } from "@remix-run/node";
 // eslint-disable-next-line import/no-named-as-default
 import gsap from "gsap";
-import lodash from "lodash";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useOutletContext } from "@remix-run/react";
 import Timeline from "~/components/Timeline";
+import HeroSection from "~/components/HeroSection";
+import Skills from "~/components/Skills";
 
 // Define the context type
 interface ContextType {
@@ -22,28 +23,12 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const comp = useRef(null);
-  const [items, setItems] = useState<string[]>([
-    "item1",
-    "item2",
-    "item3",
-    "item4",
-  ]);
 
   const { setIsIntroDone, isIntroDone } = useOutletContext<ContextType>();
 
   useEffect(() => {
-    const shuffleInterval = setInterval(() => {
-      const newShuffledItems = lodash.shuffle(items);
-      setItems(newShuffledItems);
-    }, 1000);
-
-    return () => clearInterval(shuffleInterval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [items]);
-
-  useEffect(() => {
     const isIntroLoaded = sessionStorage.getItem("isIntroLoaded");
-
+    console.log(isIntroDone, "isIntroDoneIndex");
     if (isIntroLoaded) {
       // Skip the intro
       setIsIntroDone(true);
@@ -51,7 +36,7 @@ export default function Index() {
       // Show the intro
       setIsIntroDone(false);
     }
-  }, [setIsIntroDone]);
+  }, [isIntroDone]);
 
   const handleStates = () => {
     setIsIntroDone(true);
@@ -99,7 +84,7 @@ export default function Index() {
   }, []);
 
   return (
-    <div className={`relative`} ref={isIntroDone ? comp : null}>
+    <div className={`relative`} ref={comp}>
       <div
         id="intro-slider"
         className={`h-screen p-10 bg-zinc-100 absolute top-0 left-0 font-spaceGrotesk z-50 w-full flex flex-col gap-10 tracking-tight text-zinc-900 ${
@@ -126,11 +111,14 @@ export default function Index() {
         </h1>
       </div>
       <div
+        id="welcome"
         className={`w-[90%] md:w-[80%] mx-auto ${
-          !isIntroDone ? "hidden" : "relative"
+          isIntroDone ? "relative" : "hidden"
         }`}
       >
+        <HeroSection />
         <Timeline />
+        <Skills />
       </div>
     </div>
   );

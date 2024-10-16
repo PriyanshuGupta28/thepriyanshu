@@ -34,7 +34,7 @@ const Timeline: React.FC = () => {
       <div className="relative border-l-4 border-purple-800">
         {experiences.map((experience, idx) => (
           <div className="mb-8 pl-8" key={idx}>
-            <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9px] mt-1"></div>
+            <div className="absolute w-4 h-4 bg-purple-500 rounded-full -left-[9.5px] mt-1"></div>
             <p className="text-sm text-gray-600">{experience.date}</p>
             <h3 className="text-xl font-semibold">{experience.title}</h3>
             <p className="text-md font-medium text-purple-500">

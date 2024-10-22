@@ -10,6 +10,7 @@ import Skills from "~/components/Skills";
 import { TextRevealByWord } from "~/components/ui/TextRevealByWord";
 import Projects from "~/components/Projects";
 import ContactUs from "~/components/ContactUs";
+import ProjectsComponent from "~/components/ProjectsComponent";
 
 // Define the context type
 interface ContextType {
@@ -120,8 +121,13 @@ export default function Index() {
         }`}
       >
         <HeroSection />
+        <TextRevealByWord text="Hi, my name is Priyanshu Gupta. I am a passionate web developer with expertise in building responsive and dynamic web applications. My work focuses on creating user-centric designs with seamless functionality. I'm continuously learning and evolving in the field of technology." />
         <Skills />
+
         <Timeline />
+      </div>
+      <div className={`${isIntroDone ? "relative" : "hidden"}`}>
+        <ProjectsComponent />
       </div>
     </div>
   );

@@ -11,6 +11,8 @@ import { TextRevealByWord } from "~/components/ui/TextRevealByWord";
 import Projects from "~/components/Projects";
 import ContactUs from "~/components/ContactUs";
 import ProjectsComponent from "~/components/ProjectsComponent";
+import Contact from "~/components/Contact";
+import AnimatedDivider from "~/components/AnimatedDivider";
 
 // Define the context type
 interface ContextType {
@@ -123,11 +125,31 @@ export default function Index() {
         <HeroSection />
         <TextRevealByWord text="Hi, my name is Priyanshu Gupta. I am a passionate web developer with expertise in building responsive and dynamic web applications. My work focuses on creating user-centric designs with seamless functionality. I'm continuously learning and evolving in the field of technology." />
         <Skills />
-
-        <Timeline />
       </div>
+
       <div className={`${isIntroDone ? "relative" : "hidden"}`}>
+        <AnimatedDivider
+          alignment="center"
+          text="Projects"
+          textClassName="text-3xl font-bold"
+        />
         <ProjectsComponent />
+      </div>
+      <div
+        id="welcome"
+        className={`w-[90%] md:w-[80%] mx-auto ${
+          isIntroDone ? "relative" : "hidden"
+        }`}
+      >
+        <div className="py-10">
+          <AnimatedDivider
+            alignment="center"
+            text="Work History"
+            textClassName="text-3xl font-bold"
+          />
+        </div>
+        <Timeline />
+        <Contact />
       </div>
     </div>
   );

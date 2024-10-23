@@ -1,16 +1,16 @@
 import { Link } from "@remix-run/react";
 import React from "react";
+import { SparklesText } from "./ui/SparklesText";
 
 const ProjectsComponent: React.FC = () => {
   return (
     <>
-      <h2 className="text-center text-3xl md:text-5xl font-bold">Projects</h2>
       <section className="overflow-hidden">
         <div className="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-28 md:py-[10rem] space-y-24 flex flex-col justify-center">
           <div className="flex flex-col sm:flex-row mx-auto space-y-4 sm:space-y-0 sm:space-x-4">
             {/* Project Image Links */}
             <Link
-              to="#"
+              to="projects/1"
               className="relative group rounded-xl rotate-6 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[300px] w-[230px] sm:h-[300px] sm:w-[230px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
@@ -23,7 +23,7 @@ const ProjectsComponent: React.FC = () => {
             </Link>
 
             <Link
-              to="#"
+              to="projects/1"
               className="relative group rounded-xl -rotate-12 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[200px] w-[300px] sm:h-[200px] sm:w-[350px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
@@ -36,7 +36,7 @@ const ProjectsComponent: React.FC = () => {
             </Link>
 
             <Link
-              to="#"
+              to="projects/1"
               className="relative group rounded-xl rotate-6 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[300px] w-[250px] sm:h-[300px] sm:w-[250px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
@@ -49,7 +49,7 @@ const ProjectsComponent: React.FC = () => {
             </Link>
 
             <Link
-              to="#"
+              to="projects/1"
               className="relative group rounded-xl -rotate-12 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[200px] w-[300px] sm:h-[200px] sm:w-[350px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
@@ -63,6 +63,11 @@ const ProjectsComponent: React.FC = () => {
           </div>
         </div>
       </section>
+      <p className="text-center text-lg text-zinc-50 -mt-14">
+        <Link to="/projects">
+          <SparklesText text="See All" />
+        </Link>
+      </p>
     </>
   );
 };

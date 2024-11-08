@@ -1,18 +1,18 @@
 import { useGSAP } from "@gsap/react";
-import type { MetaFunction } from "@remix-run/node";
+import type { ActionFunctionArgs, MetaFunction } from "@remix-run/node";
 // eslint-disable-next-line import/no-named-as-default
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
-import { useOutletContext } from "@remix-run/react";
+import { useEffect, useRef, useState } from "react";
+import { json, useFetcher, useOutletContext } from "@remix-run/react";
 import Timeline from "~/components/Timeline";
 import HeroSection from "~/components/HeroSection";
 import Skills from "~/components/Skills";
 import { TextRevealByWord } from "~/components/ui/TextRevealByWord";
-import Projects from "~/components/Projects";
-import ContactUs from "~/components/ContactUs";
 import ProjectsComponent from "~/components/ProjectsComponent";
 import Contact from "~/components/Contact";
 import AnimatedDivider from "~/components/AnimatedDivider";
+import { SparklesText } from "~/components/ui/SparklesText";
+import { sendMail } from "~/utils/email";
 
 // Define the context type
 interface ContextType {
@@ -27,9 +27,26 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export async function action({ request }: ActionFunctionArgs) {
+  const formData = await request.formData();
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const message = formData.get("message");
+
+  if (!name || !email || !message) {
+    return json({ error: "All fields are required" });
+  }
+  try {
+    await sendMail(name, email, message);
+    return json({ message: `Hello, ${name}. Your message has been sent!` });
+  } catch (error) {
+    return json({ error: "Failed to send email" }, { status: 500 });
+  }
+}
+
 export default function Index() {
   const comp = useRef(null);
-
+  const [successMessage, setSuccessMessage] = useState("");
   const { setIsIntroDone, isIntroDone } = useOutletContext<ContextType>();
 
   useEffect(() => {
@@ -88,6 +105,35 @@ export default function Index() {
       return () => ctx.revert();
     }
   }, []);
+  const fetcher = useFetcher();
+
+  // Refs for each input
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(".contact-title", { opacity: 0, y: -50, duration: 1 });
+    gsap.from(".contact-desc", { opacity: 0, x: -50, delay: 0.5, duration: 1 });
+    gsap.from(".contact-form", { opacity: 0, y: 50, delay: 1, duration: 1 });
+  }, []);
+  useEffect(() => {
+    if (fetcher.state === "idle" && fetcher.data?.message) {
+      nameRef.current.value = "";
+      emailRef.current.value = "";
+      messageRef.current.value = "";
+      setSuccessMessage(fetcher.data.message);
+
+      // Hide the popup after 3 seconds
+      const timer = setTimeout(() => setSuccessMessage(""), 3000);
+
+      return () => clearTimeout(timer); // Cleanup the timer
+    }
+  }, [fetcher.state, fetcher.data]);
+
+  const isSubmitting = fetcher.state === "idle";
+
+  console.log(fetcher);
 
   return (
     <div className={`relative`} ref={comp}>
@@ -133,8 +179,8 @@ export default function Index() {
           text="Projects"
           textClassName="text-3xl font-bold"
         />
-        <ProjectsComponent />
       </div>
+      <ProjectsComponent />
       <div
         id="welcome"
         className={`w-[90%] md:w-[80%] mx-auto ${
@@ -149,8 +195,74 @@ export default function Index() {
           />
         </div>
         <Timeline />
-        <Contact />
+        <div className="min-h-screen flex justify-center items-center p-6">
+          <div className="max-w-4xl w-full">
+            <h1 className="contact-title text-5xl font-bold text-white text-center">
+              Get in Touch
+            </h1>
+            <p className="contact-desc text-zinc-400 text-center mt-4">
+              We&apos;d love to hear from you! Fill out the form below and
+              we&apos;ll get back to you as soon as possible.
+            </p>
+
+            <fetcher.Form
+              method="post"
+              className="contact-form mt-10 space-y-6"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="relative">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    ref={nameRef}
+                    className="peer w-full bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500"
+                    required
+                    placeholder="Full name"
+                  />
+                </div>
+                <div className="relative">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    ref={emailRef}
+                    placeholder="Email address"
+                    className="peer w-full bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="relative">
+                <textarea
+                  id="message"
+                  name="message"
+                  ref={messageRef}
+                  placeholder="Message"
+                  className="peer w-full bg-zinc-800 text-white px-4 py-3 rounded-lg h-40 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+                  required
+                ></textarea>
+              </div>
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-zinc-700 hover:bg-cyan-800 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-700"
+                >
+                  <SparklesText
+                    text={!isSubmitting ? "Submitting..." : "Submit"}
+                  />
+                </button>
+              </div>
+            </fetcher.Form>
+          </div>
+        </div>
       </div>
+      {/* Success Popup */}
+      {successMessage && (
+        <div className="fixed top-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg">
+          {successMessage}
+        </div>
+      )}
     </div>
   );
 }

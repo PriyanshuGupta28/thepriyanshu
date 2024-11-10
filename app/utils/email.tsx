@@ -7,8 +7,8 @@ export async function sendMail(name: string, email: string, message: string) {
     port: 587,
     secure: false,
     auth: {
-      user: "28priyanshu2001@gmail.com",
-      pass: "qoduuizqffatbxnk",
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 

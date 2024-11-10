@@ -3,6 +3,7 @@ import { Link } from "@remix-run/react";
 // eslint-disable-next-line import/no-named-as-default
 import gsap from "gsap";
 import { useRef } from "react";
+import { ProjectType } from "~/models/project.server";
 
 interface GridItem {
   src: string;
@@ -13,8 +14,10 @@ interface GridItem {
   rowSpan?: string;
 }
 
-export default function BentoGrid() {
+export default function BentoGrid({ projects }: { projects: ProjectType[] }) {
   const gridRef = useRef<HTMLDivElement>(null);
+
+  console.log(projects, "projects");
 
   useGSAP(() => {
     // Animate each grid item with a stagger effect when the component mounts
@@ -100,6 +103,7 @@ export default function BentoGrid() {
             <Link
               to={`${index}`}
               key={index}
+              prefetch="intent"
               className={`relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer ${
                 item.colSpan ? item.colSpan : ""
               } ${item.rowSpan ? item.rowSpan : ""}`}

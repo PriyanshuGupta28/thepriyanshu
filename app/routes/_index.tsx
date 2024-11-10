@@ -133,8 +133,6 @@ export default function Index() {
 
   const isSubmitting = fetcher.state === "idle";
 
-  console.log(fetcher);
-
   return (
     <div className={`relative`} ref={comp}>
       <div

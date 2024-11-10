@@ -115,7 +115,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link to={href} target={target} rel="noreferrer">
+    <Link to={href} target={target} rel="noreferrer" prefetch="intent">
       <motion.div
         ref={ref}
         style={{ width, height }}

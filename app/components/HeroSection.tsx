@@ -1,7 +1,11 @@
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-
+import { useOutletContext } from "@remix-run/react";
+interface ContextType {
+  isIntroDone: boolean;
+}
 const HeroSection: React.FC = () => {
+  const { isIntroDone } = useOutletContext<ContextType>();
   return (
     <div className="flex py-10 flex-col-reverse gap-8 md:flex-row items-center justify-between w-full md:py-0">
       {/* Text Section */}
@@ -27,6 +31,7 @@ const HeroSection: React.FC = () => {
           className="w-full h-auto md:h-[500px]"
           loop
           autoplay
+          key={isIntroDone ? 1 : 0}
         />
       </div>
     </div>

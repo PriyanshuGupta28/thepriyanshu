@@ -137,7 +137,7 @@ const products: ProjectType[] = [
     ],
     price: 149.99,
     mainImage:
-      "https://plus.unsplash.com/premium_photo-1661700152890-931fb04588e6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1731286507379-94216c27cf9d?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
     techstack: ["React", "Next.js", "Tailwind CSS"],
     link: "https://picsum.photos/seed/keyboard",
@@ -175,7 +175,7 @@ const products: ProjectType[] = [
     ],
     price: 149.99,
     mainImage:
-      "https://plus.unsplash.com/premium_photo-1661700152890-931fb04588e6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1716490710550-9844f5a98999?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
     techstack: ["React", "Next.js", "Tailwind CSS"],
     link: "https://picsum.photos/seed/keyboard",
@@ -222,7 +222,7 @@ const products: ProjectType[] = [
     ],
     price: 149.99,
     mainImage:
-      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
     techstack: ["React", "Next.js", "Tailwind CSS"],
     link: "https://picsum.photos/seed/keyboard",
@@ -260,7 +260,7 @@ const products: ProjectType[] = [
     ],
     price: 149.99,
     mainImage:
-      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1431440869543-efaf3388c585?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
     techstack: ["React", "Next.js", "Tailwind CSS"],
     link: "https://picsum.photos/seed/keyboard",
@@ -336,7 +336,7 @@ const products: ProjectType[] = [
     ],
     price: 149.99,
     mainImage:
-      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1475598322381-f1b499717dda?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
     techstack: ["React", "Next.js", "Tailwind CSS"],
     link: "https://picsum.photos/seed/keyboard",
@@ -374,7 +374,7 @@ const products: ProjectType[] = [
     ],
     price: 149.99,
     mainImage:
-      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1488711500009-f9111944b1ab?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
     techstack: ["React", "Next.js", "Tailwind CSS"],
     link: "https://picsum.photos/seed/keyboard",
@@ -412,7 +412,7 @@ const products: ProjectType[] = [
     ],
     price: 149.99,
     mainImage:
-      "https://images.unsplash.com/photo-1446034295857-c39f8844fad4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1500835176302-48dbd01f6437?q=80&w=1999&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
     techstack: ["React", "Next.js", "Tailwind CSS"],
     link: "https://picsum.photos/seed/keyboard",

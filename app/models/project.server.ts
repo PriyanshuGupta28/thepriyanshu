@@ -240,28 +240,39 @@ const products: ProjectType[] = [
         title: "Key Features and Pages",
         content: "Landing Page with Animation:",
         list: [
-          "Form Completion: Agents fill out a detailed form based on the project type (Residential or Commercial). This extensive form gathers essential data, validated at each step.",
-          "Calculation & Validation: Once all fields are filled, agents click 'Validate and Calculate.' The backend verifies the data and sends a calculation back to the frontend for display.",
-          "PDF Generation: After finalizing the information, agents can click 'Generate PDF.' This triggers a backend request, which generates the PDF in Base64 format and sends it to the frontend for viewing.",
-          "Customer Copy & Cloud Storage: Upon submission, the finalized PDF is sent to the customer and saved securely in the cloud. If the agent makes changes to the form, the PDF is invalidated, and they must revalidate and regenerate it.",
+          "The website opens with an animated landing page to captivate visitors, reflecting the company’s energy and dedication. Smooth motion effects introduce the brand, with key elements and visuals that set the tone for the website.",
         ],
       },
       {
-        title: "Roles",
+        content: "About Us:",
         list: [
-          "Admin: Full access to manage users, branches, and projects.",
-          "Branch Manager: Oversees agents in their branch, creates quotations, and starts projects.",
-          "Agent: Manages their own projects and can create quotations.",
+          "This section shares the company’s story, values, and mission. The layout includes team photos, a timeline of achievements, and highlights of the brand's core values, giving users an insightful view of the company’s background and goals.",
         ],
       },
       {
-        title: "Quotation System",
-        content:
-          "Agents create quotations categorized as Residential or Commercial. Each project includes:",
+        content: "Gallery:",
         list: [
-          "Form Completion: Agents fill a form validated in real-time for project data.",
-          "Calculation & Validation: Backend calculates and verifies data before displaying it.",
-          "PDF Generation: Agents generate PDF previews, reviewed and stored in the cloud upon submission.",
+          "A visually dynamic gallery page displays high-resolution images of the company’s products, events, and facilities. The gallery utilizes a lightbox effect to view images in full screen, providing an immersive visual experience.",
+        ],
+      },
+      {
+        content: "Contact Us:",
+        list: [
+          "The contact page includes a user-friendly form with fields for name, email, subject, and message, facilitating easy communication with the company. The form is secured with backend validation for a smooth user experience. Additional contact information (phone number, email, address) is prominently displayed to offer multiple ways for customers to connect.",
+        ],
+      },
+      {
+        title: "Additional Features",
+        list: [
+          "Responsive Design: The site is fully responsive, adapting seamlessly across mobile, tablet, and desktop devices for accessibility on any platform.",
+          "SEO and Performance Optimization: The website is optimized for search engines with meta tags, structured data, and fast loading times to enhance visibility and user experience.",
+          "Analytics Integration: Analytics tracking is included to monitor user engagement, page views, and other metrics for valuable insights and future improvements.",
+        ],
+      },
+      {
+        title: "Hosting and Deployment",
+        list: [
+          "Vercel Deployment: Hosted on Vercel, the website benefits from high-speed performance and uptime reliability. The deployment with a custom domain offers a professional and accessible online platform for the company’s clients and visitors.",
         ],
       },
     ],

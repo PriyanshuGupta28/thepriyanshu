@@ -58,7 +58,7 @@ const Projects: React.FC = () => {
                     } ${item?.rowSpan ? item?.rowSpan : ""}`}
                   >
                     <img
-                      src={item?.image[0]}
+                      src={item?.mainImage}
                       alt={item?.alt}
                       className={`w-full ${
                         item.colSpan ? "h-full" : "h-full"
@@ -70,7 +70,12 @@ const Projects: React.FC = () => {
                           {item?.title}
                         </h3>
                         {item?.description && (
-                          <p className="text-white">{item.description}</p>
+                          <p className="text-white">
+                            {item.description[0]?.content
+                              .split(" ")
+                              .slice(0, 6)
+                              .join(" ") + "...  "}
+                          </p>
                         )}
                       </div>
                     </div>

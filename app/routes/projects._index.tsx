@@ -1,6 +1,6 @@
 import { json, LoaderFunction } from "@remix-run/node";
-import { Await, useLoaderData, useNavigation } from "@remix-run/react";
-import React, { Suspense, useTransition } from "react";
+import { useLoaderData } from "@remix-run/react";
+import React, { Suspense } from "react";
 import BentoGrid from "~/components/BentoGrid";
 import { getProjects, ProjectType } from "~/models/project.server";
 
@@ -12,9 +12,6 @@ export const loader: LoaderFunction = async () => {
 
 const Projects: React.FC = () => {
   const { projects } = useLoaderData<{ projects: ProjectType[] }>();
-  const transition = useTransition();
-  const isLoading = transition.state === "loading";
-  console.log(transition.state === "loading", "navigation");
 
   return (
     <div>

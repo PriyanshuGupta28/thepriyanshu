@@ -3,16 +3,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ProjectType } from "~/models/project.server";
 
-// interface ProjectDetailsProps {
-//   title: string;
-//   description: string;
-//   technologies: string[];
-//   imageUrl: string;
-//   gallery: string[];
-//   liveUrl: string;
-//   githubUrl: string;
-// }
-
 export default function ProjectDetails({
   projectData,
 }: {
@@ -20,18 +10,16 @@ export default function ProjectDetails({
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  console.log(projectData, "ProjectDetails");
-
   useEffect(() => {
     gsap.fromTo(
       containerRef.current?.children,
-      { opacity: 0, y: 50 }, // Start state
+      { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
         ease: "power2.out",
-        stagger: 0.2, // Stagger animation of items
+        stagger: 0.2,
       }
     );
   }, []);
@@ -39,12 +27,12 @@ export default function ProjectDetails({
   return (
     <div
       ref={containerRef}
-      className="min-h-screen  text-zinc-200 py-12 px-4 lg:px-24"
+      className="min-h-screen text-zinc-200 py-12 px-4 lg:px-24"
     >
       {/* Hero Section */}
       <div className="relative w-full h-96 overflow-hidden rounded-lg mb-8">
         <img
-          src={projectData?.image[0]}
+          src={projectData?.mainImage}
           alt={projectData?.title}
           className="w-full h-full object-cover object-center"
         />
@@ -58,9 +46,23 @@ export default function ProjectDetails({
       {/* Description Section */}
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-6">About the Project</h2>
-        <p className="text-lg leading-relaxed mb-8">
-          {projectData?.description}
-        </p>
+
+        {/* Render each section in the description */}
+        {projectData?.description.map((section, index) => (
+          <div key={index} className="mb-8">
+            <h3 className="text-2xl font-semibold mb-4">{section.title}</h3>
+            {section.content && (
+              <p className="text-lg leading-relaxed mb-4">{section.content}</p>
+            )}
+            {section.list && (
+              <ul className="list-disc list-inside ml-4 space-y-2">
+                {section.list.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
 
         {/* Technologies Used */}
         <h3 className="text-2xl font-semibold mb-4">Technologies Used</h3>

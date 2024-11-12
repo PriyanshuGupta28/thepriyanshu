@@ -56,7 +56,7 @@ export default function ProjectDetails({
             )}
             {section.list && (
               <ul className="list-disc list-inside ml-4 space-y-2">
-                {section?.list.map((item, i) => (
+                {section?.list?.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>

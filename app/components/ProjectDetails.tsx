@@ -52,7 +52,7 @@ export default function ProjectDetails({
           <div key={index} className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">{section?.title}</h3>
             {section.content && (
-              <p className="text-lg leading-relaxed mb-4">{section.content}</p>
+              <p className="text-lg leading-relaxed mb-4">{section?.content}</p>
             )}
             {section.list && (
               <ul className="list-disc list-inside ml-4 space-y-2">

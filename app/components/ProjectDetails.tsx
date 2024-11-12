@@ -48,7 +48,7 @@ export default function ProjectDetails({
         <h2 className="text-3xl font-bold mb-6">About the Project</h2>
 
         {/* Render each section in the description */}
-        {projectData?.description.map((section, index) => (
+        {projectData?.description?.map((section, index) => (
           <div key={index} className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">{section?.title}</h3>
             {section.content && (

@@ -145,31 +145,75 @@ const products: ProjectType[] = [
   },
   {
     id: 3,
-    title: "Laptop",
-    alt: "Laptop",
+    title: "bsre",
+    alt: "Bsre",
     name: "Mechanical Keyboard",
     description: [
       {
         title: "Project Overview",
         content:
-          "As the lead frontend developer, I created the BSSP website to manage solar project workflows with roles like Admin, Branch Manager, and Agent.",
+          "I developed and deployed the company's website on Vercel, securing a custom domain for professional online accessibility. Vercel's hosting ensures fast loading and reliable uptime, and the deployment process enables seamless updates and scalability for future needs. This setup allows the company to manage their online presence effortlessly and offer a reliable, high-performance experience to visitors.",
       },
       {
-        title: "Roles",
+        title: "Key Features and Page Descriptions",
+        content: "Landing Page with Animation:",
         list: [
-          "Admin: Full access to manage users, branches, and projects.",
-          "Branch Manager: Oversees agents in their branch, creates quotations, and starts projects.",
-          "Agent: Manages their own projects and can create quotations.",
+          "A visually captivating landing page with animations to capture user interest immediately. Leveraging motion effects, smooth transitions, and engaging visuals, the homepage provides an intuitive overview of the company's mission, services, and core values.",
         ],
       },
       {
-        title: "Quotation System",
-        content:
-          "Agents create quotations categorized as Residential or Commercial. Each project includes:",
+        title: "About Us:",
         list: [
-          "Form Completion: Agents fill a form validated in real-time for project data.",
-          "Calculation & Validation: Backend calculates and verifies data before displaying it.",
-          "PDF Generation: Agents generate PDF previews, reviewed and stored in the cloud upon submission.",
+          "This section presents the company’s story, mission, and values with a well-organized layout. Designed to reflect the brand identity, this page features team photos, an animated timeline of the company’s history, and a summary of achievements.",
+        ],
+      },
+      {
+        title: "Products:",
+        list: [
+          "A detailed, organized showcase of the company's products, with each product displayed in its own card. Each card includes a title, description, images, and relevant specifications to help customers understand product features and benefits at a glance.",
+        ],
+      },
+      {
+        title: "Branches:",
+        content:
+          "A dual-view display of all company branches across various locations:",
+        list: [
+          "Branch Cards: Each branch is represented with a card, displaying the branch name, address, contact information, and an image.",
+          "Interactive Map: An integrated map with customer markers showing each branch’s exact location. Customers can click on markers to see details for each branch, making it easy to find nearby locations.",
+        ],
+      },
+      {
+        title: "About Us:",
+        list: [
+          "This section presents the company’s story, mission, and values with a well-organized layout. Designed to reflect the brand identity, this page features team photos, an animated timeline of the company’s history, and a summary of achievements.",
+        ],
+      },
+      {
+        title: "Gallery:",
+        list: [
+          "A visually rich gallery page featuring high-quality images of the company's facilities, products, events, and achievements. The page uses a lightbox effect so users can view images in full screen, enhancing the browsing experience.",
+        ],
+      },
+      {
+        title: "Contact Us:",
+        list: [
+          "A contact page with a form to reach customer service or specific departments. The form includes fields for name, email, subject, and message, with backend validation to ensure smooth communication.",
+          "Additional contact details (phone, email, and address) are prominently displayed.",
+        ],
+      },
+      {
+        title: "Carousel with Titles and Descriptions:",
+        list: [
+          "A beautifully designed carousel on a dedicated page to feature key products, testimonials, or services. Each slide in the carousel includes an image, title, and description, allowing users to learn about highlighted offerings in a visually engaging format.",
+        ],
+      },
+      {
+        title: "Additional Features",
+        list: [
+          "Responsive Design: The website is fully responsive and optimized for different devices, ensuring a seamless experience on mobile, tablet, and desktop.",
+          "SEO Optimization: Implemented best practices for search engine optimization, including metadata, alt tags, and structured content, to improve online visibility.",
+          "Performance Optimization: Fast loading times with optimized images, efficient code, and caching strategies to provide a smooth browsing experience for users.",
+          "Analytics Integration: Added analytics tracking to monitor user behavior, page views, and other essential metrics for data-driven improvements.",
         ],
       },
     ],

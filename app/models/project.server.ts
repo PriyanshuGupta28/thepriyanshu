@@ -364,78 +364,144 @@ const products: ProjectType[] = [
   },
   {
     id: 6,
-    title: "bssp",
-    alt: "bssp",
-    name: "Mechanical Keyboard",
+    title: "Rgav Admin",
+    alt: "Rgav Admin",
+    name: "Rgav Admin",
     mainImage:
       "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: [
       {
         title: "Project Overview",
         content:
-          "As the lead frontend developer, I created the BSSP website to manage solar project workflows with roles like Admin, Branch Manager, and Agent.",
+          "I created a comprehensive admin panel for RGAV Ayurveda, designed to streamline backend management and provide insightful analytics for the team. Here’s an overview of the key features and functionalities:",
       },
       {
-        title: "Roles",
+        title: "Admin Panel Features",
+        content: "Dashboard:",
         list: [
-          "Admin: Full access to manage users, branches, and projects.",
-          "Branch Manager: Oversees agents in their branch, creates quotations, and starts projects.",
-          "Agent: Manages their own projects and can create quotations.",
+          "Overview Cards: Displays four essential metrics:",
+          "Latest User Count: Shows the number of recent users.",
+          "Total Earnings (Current Month): Highlights revenue generated in the current month.",
+          "Latest Order Count: Displays the most recent order count.",
+          "Review Count: Indicates the number of recent product reviews.",
+          "30-Day Revenue History: A set of three interactive graphs illustrating revenue trends over the past 30 days, plotted against dates to help analyze growth patterns.",
         ],
       },
       {
-        title: "Quotation System",
-        content:
-          "Agents create quotations categorized as Residential or Commercial. Each project includes:",
+        content: "User Management:",
         list: [
-          "Form Completion: Agents fill a form validated in real-time for project data.",
-          "Calculation & Validation: Backend calculates and verifies data before displaying it.",
-          "PDF Generation: Agents generate PDF previews, reviewed and stored in the cloud upon submission.",
+          "User Page: A paginated table listing all users, with controls allowing admins to set the number of users displayed per page.",
+          "User Details Page: Provides a detailed view of each user’s profile, including their personal information, purchase history, and submitted product reviews. This page enables admins to better understand user engagement and buying patterns.",
+        ],
+      },
+      {
+        content: "Order Management Page:",
+        list: [
+          "Full order management with details on each transaction, including order date, product details, payment status, and delivery status. Admins can track and update orders, making it easy to manage fulfillment and resolve issues quickly.",
+        ],
+      },
+      {
+        title: "Products Page:",
+        content: "Full CRUD Functionality:",
+        list: [
+          "Create: Admins can add new products with fields for product name, description, pricing, categories, stock quantity, and images.",
+          "Read: Displays a list of all products with key details, allowing easy reference and bulk updates.",
+          "Update: Provides an editing interface to update product details, pricing, stock, or category assignments, ensuring accurate and up-to-date information.",
+          "Delete: Enables deletion of obsolete or discontinued products, maintaining a clean product list.",
+          "The CRUD functionality supports validation and image uploads, ensuring that product listings are complete and professional.",
+        ],
+      },
+
+      {
+        title: "Hosting and Domain:",
+        list: [
+          "Hosted on Vercel for high performance and reliability.",
+          "Custom domain assigned for quick, professional access to the admin panel.",
+        ],
+      },
+      {
+        title: "Additional Features",
+        list: [
+          "Responsive Design: Optimized for access on various devices, allowing admins to manage the platform remotely.",
+          "Data Security: Built-in data protection measures ensure that user information and transaction data remain secure.",
         ],
       },
     ],
     price: 149.99,
     image: ["https://picsum.photos/seed/keyboard/400/300"],
-    techstack: ["React", "Next.js", "Tailwind CSS"],
+    techstack: ["React", "Typescript", "Mui", "Axios", "Recharts"],
     link: "https://picsum.photos/seed/keyboard",
     github: "https://picsum.photos/seed/keyboard",
   },
   {
     id: 7,
-    title: "Laptop",
-    alt: "Laptop",
+    title: "react-base64-to-pdf",
+    alt: "react-base64-to-pdf",
     name: "Mechanical Keyboard",
     description: [
       {
-        title: "Project Overview",
+        title: "Package Overview",
         content:
-          "As the lead frontend developer, I created the BSSP website to manage solar project workflows with roles like Admin, Branch Manager, and Agent.",
+          "I developed an npm package called react-base64-to-pdf to simplify handling Base64-encoded PDF files in React applications. This package was born from the need for a reliable, flexible PDF viewer that was missing in existing packages, making it easier to integrate PDF functionality directly into React projects.",
       },
       {
-        title: "Roles",
+        content:
+          "react-base64-to-pdf is a React component library designed for:",
         list: [
-          "Admin: Full access to manage users, branches, and projects.",
-          "Branch Manager: Oversees agents in their branch, creates quotations, and starts projects.",
-          "Agent: Manages their own projects and can create quotations.",
+          "Displaying PDF Information: View file size, PDF version, creation date, and more.",
+          "Previewing PDF Content: Render PDF content directly within the application for seamless in-app viewing.",
+          "Downloading PDFs: Enable users to download PDF files with a single click.",
         ],
       },
       {
-        title: "Quotation System",
-        content:
-          "Agents create quotations categorized as Residential or Commercial. Each project includes:",
+        title: "Components",
+        content: "PDFInfo",
         list: [
-          "Form Completion: Agents fill a form validated in real-time for project data.",
-          "Calculation & Validation: Backend calculates and verifies data before displaying it.",
-          "PDF Generation: Agents generate PDF previews, reviewed and stored in the cloud upon submission.",
+          "Description: Displays core information about the PDF file, like its file size, version, creation and modification dates, and the creation tool.",
+          "Props: base64 (string): The Base64-encoded PDF string.",
         ],
+      },
+      {
+        content: "PDFPreview",
+        list: [
+          "Description: Renders a preview of the PDF file, allowing users to view the content directly in the app.",
+        ],
+      },
+      {
+        content: "Props:",
+        list: [
+          "base64 (string): The Base64-encoded PDF string.",
+          "style (React.CSSProperties, optional): Allows custom styling for the preview.",
+          "className (string, optional): Additional CSS class names for further styling.",
+        ],
+      },
+      {
+        content: "PDFDownloadButton",
+      },
+      {
+        content:
+          "Description: Provides a button to download the PDF, with customizable options for user-friendly downloading.",
+      },
+      {
+        content: "Props:",
+        list: [
+          "base64 (string): The Base64-encoded PDF string.",
+          "downloadFileName (string, optional): The name for the downloaded file; defaults to 'file.pdf' if not provided.",
+          "style (React.CSSProperties, optional): Custom styles for the button.",
+          "className (string, optional): Additional CSS class names.",
+        ],
+      },
+      {
+        content:
+          "This package is ideal for any React application needing an efficient and user-friendly way to view, preview, and download PDF files, all from Base64 encoding.",
       },
     ],
     price: 149.99,
     mainImage:
       "https://images.unsplash.com/photo-1475598322381-f1b499717dda?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
-    techstack: ["React", "Next.js", "Tailwind CSS"],
-    link: "https://picsum.photos/seed/keyboard",
+    techstack: ["React", "Typescript", "Node.js"],
+    link: "https://www.npmjs.com/package/react-base64-to-pdf",
     github: "https://picsum.photos/seed/keyboard",
   },
   {

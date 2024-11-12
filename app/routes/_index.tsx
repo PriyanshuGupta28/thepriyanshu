@@ -9,7 +9,6 @@ import HeroSection from "~/components/HeroSection";
 import Skills from "~/components/Skills";
 import { TextRevealByWord } from "~/components/ui/TextRevealByWord";
 import ProjectsComponent from "~/components/ProjectsComponent";
-import Contact from "~/components/Contact";
 import AnimatedDivider from "~/components/AnimatedDivider";
 import { SparklesText } from "~/components/ui/SparklesText";
 import { sendMail } from "~/utils/email";
@@ -178,7 +177,15 @@ export default function Index() {
           textClassName="text-3xl font-bold"
         />
       </div>
-      <ProjectsComponent />
+      <div
+        id="welcome"
+        className={`w-[100%] md:w-[100%] mx-auto ${
+          isIntroDone ? "relative" : "hidden"
+        }`}
+      >
+        <ProjectsComponent />
+      </div>
+
       <div
         id="welcome"
         className={`w-[90%] md:w-[80%] mx-auto ${

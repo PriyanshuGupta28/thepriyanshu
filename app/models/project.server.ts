@@ -286,9 +286,9 @@ const products: ProjectType[] = [
   },
   {
     id: 5,
-    title: "Laptop",
-    alt: "Laptop",
-    name: "Mechanical Keyboard",
+    title: "Rgav",
+    alt: "Rgav",
+    name: "Rgav",
     description: [
       {
         title: "Project Overview",

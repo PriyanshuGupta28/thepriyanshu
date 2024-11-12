@@ -54,7 +54,7 @@ export default function ProjectDetails({
             {section?.content && (
               <p className="text-lg leading-relaxed mb-4">{section?.content}</p>
             )}
-            {section.list && (
+            {section?.list && (
               <ul className="list-disc list-inside ml-4 space-y-2">
                 {section?.list?.map((item, i) => (
                   <li key={i}>{item}</li>

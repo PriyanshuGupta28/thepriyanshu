@@ -293,24 +293,64 @@ const products: ProjectType[] = [
       {
         title: "Project Overview",
         content:
-          "As the lead frontend developer, I created the BSSP website to manage solar project workflows with roles like Admin, Branch Manager, and Agent.",
+          "I developed a feature-rich e-commerce website for RGAV Ayurveda, carefully designed to provide users with an engaging and secure shopping experience for Ayurvedic products. After gathering requirements from the CEO and Ayurveda team, I implemented a variety of pages and functionalities to meet their needs.",
       },
       {
-        title: "Roles",
+        title: "Key Features and Functionalities",
+        content: "Home Page:",
         list: [
-          "Admin: Full access to manage users, branches, and projects.",
-          "Branch Manager: Oversees agents in their branch, creates quotations, and starts projects.",
-          "Agent: Manages their own projects and can create quotations.",
+          "Infinite Carousel: A continuously scrolling carousel showcasing featured Ayurvedic products and promotions.",
+          "Product Carousels: Dedicated sections for latest and popular products, each displayed in a user-friendly carousel format.",
+          "Why Choose RGAV Ayurveda?: An informative section highlighting the company’s unique values and benefits, helping users understand the brand’s dedication to quality and tradition.",
         ],
       },
       {
-        title: "Quotation System",
-        content:
-          "Agents create quotations categorized as Residential or Commercial. Each project includes:",
+        content: "About Us and Contact Us Pages:",
         list: [
-          "Form Completion: Agents fill a form validated in real-time for project data.",
-          "Calculation & Validation: Backend calculates and verifies data before displaying it.",
-          "PDF Generation: Agents generate PDF previews, reviewed and stored in the cloud upon submission.",
+          "About Us: A detailed overview of the company’s mission, history, and core values.",
+          "Contact Us: A contact form and additional contact details, enabling users to reach out to the RGAV team directly.",
+        ],
+      },
+      {
+        content: "Product Listings and E-Commerce Functionality:",
+        list: [
+          "All Products Page: Displays the full range of RGAV products with interactive product cards featuring:",
+          "Add to Cart: Allows users to add products to their cart with full CRUD operations for cart management.",
+          "Add to Favorites: A wishlist functionality where users can save favorite items, also with CRUD capabilities.",
+          "Buy Now: A quick-purchase option for instant checkout.",
+          "Advanced Filters: Includes filtering options commonly found on e-commerce platforms, allowing users to sort by price, category, popularity, and other relevant criteria.",
+        ],
+      },
+      {
+        content: "Product Details Page:",
+        list: [
+          "Displays detailed information for individual products. If a user has purchased a product, they can leave a review and rate the product, adding valuable feedback for others.",
+        ],
+      },
+      {
+        content: "Authentication and Security:",
+        list: [
+          "Sign Up and Login Pages: Collect necessary information for secure account creation and login.",
+          "High-Level Security: Utilizes access tokens for session management and stores refresh tokens securely in HTTP-only cookies to protect user data.",
+        ],
+      },
+      {
+        content: "Buy Page and Payment Integration:",
+        list: [
+          "A dedicated Buy page is in development, featuring payment integration to allow seamless transactions.",
+        ],
+      },
+      {
+        title: "Additional Features",
+        list: [
+          "Responsive Design: The site is fully optimized for various devices to provide a smooth experience across desktop, tablet, and mobile.",
+          "Blog Page (Under Construction): A future content hub for Ayurvedic insights and company updates.",
+        ],
+      },
+      {
+        title: "Hosting and Deployment  ",
+        list: [
+          "Vercel Hosting: The frontend is hosted on Vercel with a custom domain, ensuring high performance, reliability, and an easy deployment pipeline for future updates.",
         ],
       },
     ],

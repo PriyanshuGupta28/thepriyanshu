@@ -126,7 +126,7 @@ const products: ProjectType[] = [
   },
 ];
 
-export async function getProjects(): Promise<ProjectType[]> {
+export function getProjects(): ProjectType[] {
   return products;
 }
 

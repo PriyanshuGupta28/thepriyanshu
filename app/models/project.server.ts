@@ -15,7 +15,7 @@ export interface ProjectType {
 }
 
 export interface DescriptionSection {
-  title: string;
+  title?: string;
   content?: string;
   list?: string[];
 }
@@ -227,17 +227,18 @@ const products: ProjectType[] = [
   },
   {
     id: 4,
-    title: "bssp",
-    alt: "bssp",
+    title: "Bsit",
+    alt: "bsit",
     name: "Mechanical Keyboard",
     description: [
       {
         title: "Project Overview",
         content:
-          "As the lead frontend developer, I created the BSSP website to manage solar project workflows with roles like Admin, Branch Manager, and Agent.",
+          "I developed a sleek and engaging website for [Company Name], designed to establish a strong online presence and showcase the brand’s identity. Hosted on Vercel with a custom domain, the website provides an optimized user experience with responsive design, seamless navigation, and performance enhancements.",
       },
       {
-        title: "Features Developed",
+        title: "Key Features and Pages",
+        content: "Landing Page with Animation:",
         list: [
           "Form Completion: Agents fill out a detailed form based on the project type (Residential or Commercial). This extensive form gathers essential data, validated at each step.",
           "Calculation & Validation: Once all fields are filled, agents click 'Validate and Calculate.' The backend verifies the data and sends a calculation back to the frontend for display.",

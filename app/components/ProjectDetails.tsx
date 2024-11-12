@@ -51,7 +51,7 @@ export default function ProjectDetails({
         {projectData?.description?.map((section, index) => (
           <div key={index} className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">{section?.title}</h3>
-            {section.content && (
+            {section?.content && (
               <p className="text-lg leading-relaxed mb-4">{section?.content}</p>
             )}
             {section.list && (

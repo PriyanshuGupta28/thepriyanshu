@@ -18,12 +18,14 @@ const ProjectsComponent: React.FC = () => {
               }}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <span className="text-white text-xl font-bold">Project 1</span>
+                <span className="text-white text-xl font-bold">
+                  Solar Software
+                </span>
               </div>
             </Link>
 
             <Link
-              to="projects/1"
+              to="projects/2"
               className="relative group rounded-xl -rotate-12 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[200px] w-[300px] sm:h-[200px] sm:w-[350px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
@@ -31,12 +33,14 @@ const ProjectsComponent: React.FC = () => {
               }}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <span className="text-white text-xl font-bold">Project 2</span>
+                <span className="text-white text-xl font-bold">
+                  Banking Software
+                </span>
               </div>
             </Link>
 
             <Link
-              to="projects/1"
+              to="projects/7"
               className="relative group rounded-xl rotate-6 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[300px] w-[250px] sm:h-[300px] sm:w-[250px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
@@ -44,12 +48,14 @@ const ProjectsComponent: React.FC = () => {
               }}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <span className="text-white text-xl font-bold">Project 3</span>
+                <span className="text-white text-xl font-bold">
+                  Npm Package
+                </span>
               </div>
             </Link>
 
             <Link
-              to="projects/1"
+              to="projects/5"
               className="relative group rounded-xl -rotate-12 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[200px] w-[300px] sm:h-[200px] sm:w-[350px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
@@ -57,7 +63,7 @@ const ProjectsComponent: React.FC = () => {
               }}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <span className="text-white text-xl font-bold">Project 4</span>
+                <span className="text-white text-xl font-bold">E Commerce</span>
               </div>
             </Link>
           </div>

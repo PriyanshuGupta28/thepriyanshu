@@ -10,6 +10,8 @@ import "./tailwind.css";
 import { useState } from "react";
 import FloatingDockDemo from "./components/FloatingDockDemo";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import { isMobile } from "mobile-device-detect";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -44,12 +46,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const [isIntroDone, setIsIntroDone] = useState(true);
-  console.log(isIntroDone, "isIntroDone");
   return (
     <Layout>
+      {isMobile ? <Navbar isIntroDone={isIntroDone} /> : null}
+
       <Outlet context={{ isIntroDone, setIsIntroDone }} />
       <Footer isIntroDone={isIntroDone} />
-      <FloatingDockDemo isIntroDone={isIntroDone} />
+      {!isMobile ? <FloatingDockDemo isIntroDone={isIntroDone} /> : null}
     </Layout>
   );
 }

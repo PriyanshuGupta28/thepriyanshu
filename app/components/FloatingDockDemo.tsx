@@ -1,7 +1,6 @@
 import {
   IconBook,
   IconBrandGithub,
-  IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandX,
   IconHome,

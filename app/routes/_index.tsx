@@ -12,6 +12,7 @@ import ProjectsComponent from "~/components/ProjectsComponent";
 import AnimatedDivider from "~/components/AnimatedDivider";
 import { SparklesText } from "~/components/ui/SparklesText";
 import { sendMail } from "~/utils/email";
+import toast from "react-hot-toast";
 
 // Define the context type
 interface ContextType {
@@ -45,7 +46,6 @@ export async function action({ request }: ActionFunctionArgs) {
 
 export default function Index() {
   const comp = useRef(null);
-  const [successMessage, setSuccessMessage] = useState("");
   const { setIsIntroDone, isIntroDone } = useOutletContext<ContextType>();
 
   useEffect(() => {
@@ -120,12 +120,14 @@ export default function Index() {
       nameRef.current.value = "";
       emailRef.current.value = "";
       messageRef.current.value = "";
-      setSuccessMessage(fetcher.data.message);
-
-      // Hide the popup after 3 seconds
-      const timer = setTimeout(() => setSuccessMessage(""), 3000);
-
-      return () => clearTimeout(timer); // Cleanup the timer
+      toast.success(fetcher.data.message, {
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: "#fff",
+        },
+        duration: 5000,
+      });
     }
   }, [fetcher.state, fetcher.data]);
 
@@ -263,12 +265,6 @@ export default function Index() {
           </div>
         </div>
       </div>
-      {/* Success Popup */}
-      {successMessage && (
-        <div className="fixed top-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg">
-          {successMessage}
-        </div>
-      )}
     </div>
   );
 }

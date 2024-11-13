@@ -178,10 +178,7 @@ export default function Index() {
         />
       </div>
       <div
-        id="welcome"
-        className={`w-[100%] md:w-[100%] mx-auto ${
-          isIntroDone ? "relative" : "hidden"
-        }`}
+        className={`w-[100%] mx-auto ${isIntroDone ? "relative" : "hidden"}`}
       >
         <ProjectsComponent />
       </div>

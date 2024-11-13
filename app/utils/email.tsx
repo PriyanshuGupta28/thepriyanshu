@@ -14,8 +14,8 @@ export async function sendMail(name: string, email: string, message: string) {
 
   // Set up email data
   const mailOptions = {
-    from: `"${name}" <${email}>`, // sender info
-    to: "28priyanshu2001@gmail.com", // receiver email address
+    from: `"${name}" <${email}>`,
+    to: "28priyanshu2001@gmail.com",
     subject: "New Contact Message",
     text: message,
     html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,

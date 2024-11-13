@@ -65,14 +65,14 @@ const FloatingDockDemo: React.FC<NavbarProps> = ({ isIntroDone }) => {
       href: "https://www.linkedin.com/in/priyanshu-kumar-581a5a246/",
       target: "_blank",
     },
-    {
-      title: "Instagram",
-      icon: (
-        <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-      target: "_blank",
-    },
+    // {
+    //   title: "Instagram",
+    //   icon: (
+    //     <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "#",
+    //   target: "_blank",
+    // },
     {
       title: "Twitter",
       icon: (

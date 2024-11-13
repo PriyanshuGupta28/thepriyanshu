@@ -12,6 +12,7 @@ import FloatingDockDemo from "./components/FloatingDockDemo";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { isMobile } from "mobile-device-detect";
+import { Toaster } from "react-hot-toast";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -49,7 +50,7 @@ export default function App() {
   return (
     <Layout>
       {isMobile ? <Navbar isIntroDone={isIntroDone} /> : null}
-
+      <Toaster position="top-center" reverseOrder={false} />
       <Outlet context={{ isIntroDone, setIsIntroDone }} />
       <Footer isIntroDone={isIntroDone} />
       {!isMobile ? <FloatingDockDemo isIntroDone={isIntroDone} /> : null}

@@ -50,7 +50,6 @@ export default function Index() {
 
   useEffect(() => {
     const isIntroLoaded = sessionStorage.getItem("isIntroLoaded");
-    console.log(isIntroDone, "isIntroDoneIndex");
     if (isIntroLoaded) {
       // Skip the intro
       setIsIntroDone(true);

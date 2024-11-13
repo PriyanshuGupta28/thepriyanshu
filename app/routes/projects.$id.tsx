@@ -14,7 +14,6 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 const ProjectId: React.FC = () => {
   const { projectData } = useLoaderData<{ projectData: ProjectType }>();
-  // console.log(projectData, "ProjectId");
   return (
     <div>
       <ProjectDetails projectData={projectData} />

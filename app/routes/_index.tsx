@@ -197,6 +197,11 @@ export default function Index() {
           />
         </div>
         <Timeline />
+        <AnimatedDivider
+          alignment="center"
+          text="Contact "
+          textClassName="text-3xl font-bold"
+        />
         <div className="min-h-screen flex justify-center items-center p-6">
           <div className="max-w-4xl w-full">
             <h1 className="contact-title text-5xl font-bold text-white text-center">

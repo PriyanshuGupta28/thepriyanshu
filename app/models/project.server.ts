@@ -87,7 +87,7 @@ const products: ProjectType[] = [
     ],
     price: 149.99,
     mainImage:
-      "https://plus.unsplash.com/premium_photo-1686050878751-89499d28d153?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://4kwallpapers.com/images/wallpapers/your-name-shooting-3840x2160-14938.jpg",
     image: [
       "https://images.unsplash.com/photo-1710200554090-35b36b398ee4?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1716709797897-644623d7c48f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

@@ -29,7 +29,7 @@ const ProjectsComponent: React.FC = () => {
               className="relative group rounded-xl -rotate-12 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[200px] w-[300px] sm:h-[200px] sm:w-[350px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1504333638930-c8787321eee0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                  "url('https://images.unsplash.com/photo-1731286507379-94216c27cf9d?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
               }}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -44,7 +44,7 @@ const ProjectsComponent: React.FC = () => {
               className="relative group rounded-xl rotate-6 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[300px] w-[250px] sm:h-[300px] sm:w-[250px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                  "url('https://images.unsplash.com/photo-1475598322381-f1b499717dda?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
               }}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -59,7 +59,7 @@ const ProjectsComponent: React.FC = () => {
               className="relative group rounded-xl -rotate-12 hover:rotate-0 transform origin-bottom duration-500 hover:-translate-y-12 h-[200px] w-[300px] sm:h-[200px] sm:w-[350px] bg-cover bg-center hover:scale-150"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                  "url('https://images.unsplash.com/photo-1431440869543-efaf3388c585?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
               }}
             >
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">

@@ -12,7 +12,7 @@ import ProjectsComponent from "~/components/ProjectsComponent";
 import AnimatedDivider from "~/components/AnimatedDivider";
 import { SparklesText } from "~/components/ui/SparklesText";
 import { sendMail } from "~/utils/email";
-import toast from "react-hot-toast";
+import { showSuccessToast } from "~/utils/toast";
 
 // Define the context type
 interface ContextType {
@@ -120,14 +120,7 @@ export default function Index() {
       nameRef.current.value = "";
       emailRef.current.value = "";
       messageRef.current.value = "";
-      toast.success(fetcher.data.message, {
-        style: {
-          borderRadius: "10px",
-          background: "#333",
-          color: "#fff",
-        },
-        duration: 5000,
-      });
+      showSuccessToast(fetcher.data?.message);
     }
   }, [fetcher.state, fetcher.data]);
 

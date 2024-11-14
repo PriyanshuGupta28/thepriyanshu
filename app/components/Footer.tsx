@@ -1,5 +1,6 @@
 import { Link } from "@remix-run/react";
 import React, { useRef } from "react";
+import logo from "~/assets/logo.png";
 interface FooterProps {
   isIntroDone: boolean;
 }
@@ -19,11 +20,7 @@ const Footer: React.FC<FooterProps> = ({ isIntroDone }) => {
         <div className="flex flex-wrap items-center sm:justify-between max-sm:flex-col gap-6">
           <div>
             <Link to="/">
-              <img
-                src="https://readymadeui.com/readymadeui-light.svg"
-                alt="logo"
-                className="w-44"
-              />
+              <img src={logo} alt="logo" className="w-44" />
             </Link>
           </div>
 

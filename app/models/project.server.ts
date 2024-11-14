@@ -92,7 +92,7 @@ const products: ProjectType[] = [
       "https://images.unsplash.com/photo-1710200554090-35b36b398ee4?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1716709797897-644623d7c48f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
-    techstack: ["React", "Next.js", "Tailwind CSS"],
+    techstack: ["React", "Typescript", "Mui", "Axios"],
     link: "https://picsum.photos/seed/keyboard",
     github: "https://picsum.photos/seed/keyboard",
     colSpan: "md:col-span-2",
@@ -139,7 +139,15 @@ const products: ProjectType[] = [
     mainImage:
       "https://images.unsplash.com/photo-1731286507379-94216c27cf9d?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
-    techstack: ["React", "Next.js", "Tailwind CSS"],
+    techstack: [
+      "React",
+      "Node.js",
+      "Microsoft SQL",
+      "Express.js",
+      "Mui",
+      "Axios",
+      "Msg91",
+    ],
     link: "https://picsum.photos/seed/keyboard",
     github: "https://picsum.photos/seed/keyboard",
   },
@@ -221,7 +229,7 @@ const products: ProjectType[] = [
     mainImage:
       "https://images.unsplash.com/photo-1716490710550-9844f5a98999?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
-    techstack: ["React", "Next.js", "Tailwind CSS"],
+    techstack: ["React", "TypeScript", "Vercel", "Mui"],
     link: "https://picsum.photos/seed/keyboard",
     github: "https://picsum.photos/seed/keyboard",
   },
@@ -280,7 +288,7 @@ const products: ProjectType[] = [
     mainImage:
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
-    techstack: ["React", "Next.js", "Tailwind CSS"],
+    techstack: ["React", "TypeScript", "Vercel", "Mui"],
     link: "https://picsum.photos/seed/keyboard",
     github: "https://picsum.photos/seed/keyboard",
   },
@@ -500,37 +508,32 @@ const products: ProjectType[] = [
     mainImage:
       "https://images.unsplash.com/photo-1475598322381-f1b499717dda?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
-    techstack: ["React", "Typescript", "Node.js"],
+    techstack: ["React", "Typescript", "Node.js", "Npm"],
     link: "https://www.npmjs.com/package/react-base64-to-pdf",
     github: "https://picsum.photos/seed/keyboard",
   },
   {
     id: 8,
-    title: "bssp",
-    alt: "bssp",
-    name: "Mechanical Keyboard",
+    title: "Cloudflare Tunnel",
+    alt: "Cloudflare Tunnel",
+    name: "Cloudflare Tunnel",
     description: [
       {
-        title: "Project Overview",
+        title:
+          "Enabling Global Access to Locally Hosted Software through a Secure Cloudflare Tunnel ",
         content:
-          "As the lead frontend developer, I created the BSSP website to manage solar project workflows with roles like Admin, Branch Manager, and Agent.",
+          "I set up a secure tunnel between a local PC and Cloudflare, enabling remote access to software running on the local machine from anywhere in the world using a domain. This setup leverages Cloudflare's tunneling feature, which establishes a secure, reliable connection between the local environment and Cloudflare’s network. By routing traffic through this tunnel, users can access applications hosted locally via a public domain without exposing the local network directly to the internet, ensuring both accessibility and enhanced security.",
       },
       {
-        title: "Roles",
+        title: "Steps i configure to set up a secure tunnel",
         list: [
-          "Admin: Full access to manage users, branches, and projects.",
-          "Branch Manager: Oversees agents in their branch, creates quotations, and starts projects.",
-          "Agent: Manages their own projects and can create quotations.",
-        ],
-      },
-      {
-        title: "Quotation System",
-        content:
-          "Agents create quotations categorized as Residential or Commercial. Each project includes:",
-        list: [
-          "Form Completion: Agents fill a form validated in real-time for project data.",
-          "Calculation & Validation: Backend calculates and verifies data before displaying it.",
-          "PDF Generation: Agents generate PDF previews, reviewed and stored in the cloud upon submission.",
+          "Set Up a Cloudflare Account and Domain: Registered an account with Cloudflare and configured a domain or subdomain that would serve as the public access point for the local application.",
+          "Install Cloudflare Tunnel (Cloudflared) on Local Machine: Installed the cloudflared client on the local PC, which is used to create a tunnel to Cloudflare’s network.",
+          "Authenticate Cloudflared with Cloudflare Account: Logged in to cloudflared and authenticated it with my Cloudflare account to ensure secure access and control over the tunnel configuration.",
+          "Configure the Tunnel: Created a new tunnel with a specific name in the Cloudflare dashboard or using the command line, then mapped it to the local IP and port where the application is running.",
+          "Map Domain to the Tunnel: Set up a DNS entry in Cloudflare for the domain or subdomain to route traffic through the created tunnel, linking it to the application’s endpoint.",
+          "Run the Tunnel: Launched the tunnel using cloudflared to establish a secure connection between the local machine and Cloudflare, allowing the application to be accessible worldwide via the domain.",
+          "Test Remote Access: Accessed the domain from different networks to ensure that the application is reachable and running securely, confirming a stable connection and reliability.",
         ],
       },
     ],
@@ -538,37 +541,64 @@ const products: ProjectType[] = [
     mainImage:
       "https://images.unsplash.com/photo-1488711500009-f9111944b1ab?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
-    techstack: ["React", "Next.js", "Tailwind CSS"],
+    techstack: ["Cloud Infrastructure:", "Security", "Pipelines"],
     link: "https://picsum.photos/seed/keyboard",
     github: "https://picsum.photos/seed/keyboard",
   },
   {
     id: 9,
-    title: "bssp",
-    alt: "bssp",
-    name: "Mechanical Keyboard",
+    title: "Investment Web App",
+    alt: "Blockchain-Based Investment Web Application with Admin and User Panels",
+    name: "Blockchain-Based Investment Web Application with Admin and User Panels",
     description: [
       {
         title: "Project Overview",
         content:
-          "As the lead frontend developer, I created the BSSP website to manage solar project workflows with roles like Admin, Branch Manager, and Agent.",
+          "This investment web application was developed using React with TypeScript (TSX) and blockchain technology to create a secure, user-friendly platform for managing investments. The app features both a public-facing landing page and separate user and admin dashboards, enabling users to connect their wallets, view their balances, invest, and withdraw, while providing admins with comprehensive management tools.",
       },
       {
-        title: "Roles",
+        title: "Landing Page",
         list: [
-          "Admin: Full access to manage users, branches, and projects.",
-          "Branch Manager: Oversees agents in their branch, creates quotations, and starts projects.",
-          "Agent: Manages their own projects and can create quotations.",
+          "Home: An engaging landing page showcasing the platform's unique value proposition, investment options, and benefits of blockchain integration for secure transactions.",
+          "About Us: Details about the company’s mission, investment philosophy, and the team behind the platform.",
+          "Contact Us: A contact form and contact details to help users reach out for support or inquiries.",
+          "News: An updated section displaying recent news related to blockchain, finance, and market insights, providing users with valuable context and updates.",
         ],
       },
       {
-        title: "Quotation System",
+        title: "User Panel",
         content:
-          "Agents create quotations categorized as Residential or Commercial. Each project includes:",
+          "Wallet Connection: Seamless integration with MetaMask, allowing users to securely connect their wallets and manage their funds within the app.",
         list: [
-          "Form Completion: Agents fill a form validated in real-time for project data.",
-          "Calculation & Validation: Backend calculates and verifies data before displaying it.",
-          "PDF Generation: Agents generate PDF previews, reviewed and stored in the cloud upon submission.",
+          "Account Balance: The user's current balance in their connected wallet.",
+          "Total Deposited: The total amount invested by the user.",
+          "Monthly Returns: Real-time calculation of monthly returns based on the invested amount.",
+          "Total Returns: Cumulative earnings since the beginning of the investment.",
+          "Deposit Window: A deposit section where users can invest additional funds into the platform.",
+          "Withdraw Window: Allows users to submit withdrawal requests to access their balance, pending admin approval.",
+        ],
+      },
+      {
+        title: "Admin Panel",
+        content:
+          "Dashboard: A comprehensive overview providing metrics such as",
+        list: [
+          "Total Users: The total count of registered users.",
+          "Total Balance: The combined total balance of all user accounts.",
+          "Total Deposits and Withdrawals: Aggregate values for deposited and withdrawn amounts across all users.",
+          "Monthly Deposits & Withdrawals Graph: Visual representation of monthly deposit and withdrawal trends.",
+          "Withdraw Approvals: A dedicated page for approving or rejecting user withdrawal requests, providing secure oversight and manual validation.",
+          "Transactions Page: A full transaction history, displaying all deposits and withdrawals made by users, with timestamped records for transparency.",
+          "Investment Percentage Adjustment: At the end of each month, the admin can add a percentage return to all users' investment balances. This percentage is dynamically calculated based on the admin’s earned revenue, ensuring a fair return distribution.",
+          "User Management: A paginated table listing all registered users, with access to user profiles and investment histories, allowing the admin to manage and review individual accounts.",
+        ],
+      },
+      {
+        title: "Technologies Used",
+        list: [
+          "Frontend: React with TypeScript (TSX) for component-based, type-safe development.",
+          "Blockchain Integration: MetaMask for wallet connectivity and blockchain transactions.",
+          "Data Visualization: Graphical representation of financial data for both users and admin to track and analyze investments and returns.",
         ],
       },
     ],
@@ -576,7 +606,7 @@ const products: ProjectType[] = [
     mainImage:
       "https://images.unsplash.com/photo-1500835176302-48dbd01f6437?q=80&w=1999&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     image: ["https://picsum.photos/seed/keyboard/400/300"],
-    techstack: ["React", "Next.js", "Tailwind CSS"],
+    techstack: ["React", "TypeScript", "Mui", "Metamask", "web3"],
     link: "https://picsum.photos/seed/keyboard",
     github: "https://picsum.photos/seed/keyboard",
   },

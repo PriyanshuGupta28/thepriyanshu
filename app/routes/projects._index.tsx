@@ -2,10 +2,23 @@ import React, { Suspense, useRef } from "react";
 import { LoaderFunction } from "@remix-run/node";
 // eslint-disable-next-line import/no-named-as-default
 import gsap from "gsap";
-import { Await, defer, Link, useLoaderData } from "@remix-run/react";
+import {
+  Await,
+  defer,
+  Link,
+  MetaFunction,
+  useLoaderData,
+} from "@remix-run/react";
 import { getProjects, ProjectType } from "~/models/project.server";
 import { useGSAP } from "@gsap/react";
 import Loader from "~/components/Loader/Loader";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "The Priyanshu | Projects" },
+    { name: "description", content: "Welcome to The Priyanshu!" },
+  ];
+};
 
 export const loader: LoaderFunction = () => {
   return defer({

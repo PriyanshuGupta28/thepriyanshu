@@ -2,8 +2,13 @@ import { useGSAP } from "@gsap/react";
 import type { ActionFunctionArgs, MetaFunction } from "@remix-run/node";
 // eslint-disable-next-line import/no-named-as-default
 import gsap from "gsap";
-import { useEffect, useRef, useState } from "react";
-import { json, useFetcher, useOutletContext } from "@remix-run/react";
+import { useEffect, useRef } from "react";
+import {
+  json,
+  useActionData,
+  useFetcher,
+  useOutletContext,
+} from "@remix-run/react";
 import Timeline from "~/components/Timeline";
 import HeroSection from "~/components/HeroSection";
 import Skills from "~/components/Skills";
@@ -12,7 +17,7 @@ import ProjectsComponent from "~/components/ProjectsComponent";
 import AnimatedDivider from "~/components/AnimatedDivider";
 import { SparklesText } from "~/components/ui/SparklesText";
 import { sendMail } from "~/utils/email";
-import { showSuccessToast } from "~/utils/toast";
+import { showErrorToast, showSuccessToast } from "~/utils/toast";
 
 // Define the context type
 interface ContextType {
@@ -46,6 +51,7 @@ export async function action({ request }: ActionFunctionArgs) {
 
 export default function Index() {
   const comp = useRef(null);
+  const action = useActionData();
   const { setIsIntroDone, isIntroDone } = useOutletContext<ContextType>();
 
   useEffect(() => {
@@ -59,6 +65,7 @@ export default function Index() {
     }
   }, [isIntroDone]);
 
+  console.log(action, "action");
   const handleStates = () => {
     setIsIntroDone(true);
     sessionStorage.setItem("isIntroLoaded", "1");
@@ -116,11 +123,17 @@ export default function Index() {
     gsap.from(".contact-form", { opacity: 0, y: 50, delay: 1, duration: 1 });
   }, []);
   useEffect(() => {
-    if (fetcher.state === "idle" && fetcher.data?.message) {
-      nameRef.current.value = "";
-      emailRef.current.value = "";
-      messageRef.current.value = "";
-      showSuccessToast(fetcher.data?.message);
+    if (fetcher.state === "idle") {
+      if (fetcher.data?.message) {
+        // Reset form fields on success
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        messageRef.current.value = "";
+        showSuccessToast(fetcher.data.message);
+      } else if (fetcher.data?.error) {
+        // Show error toast on failure
+        showErrorToast(fetcher.data.error);
+      }
     }
   }, [fetcher.state, fetcher.data]);
 

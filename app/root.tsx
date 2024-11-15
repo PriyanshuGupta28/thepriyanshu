@@ -50,7 +50,7 @@ export default function App() {
   const [isIntroDone, setIsIntroDone] = useState(true);
   return (
     <Layout>
-      {isMobile ? <Navbar isIntroDone={isIntroDone} /> : null}
+      {isIntroDone && isMobile ? <Navbar isIntroDone={isIntroDone} /> : null}
       <Toaster position="top-center" reverseOrder={false} />
       <Outlet context={{ isIntroDone, setIsIntroDone }} />
       <Footer isIntroDone={isIntroDone} />

@@ -20,7 +20,6 @@ export async function sendMail(name: string, email: string, message: string) {
     text: message,
     html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
   };
-  console.log(mailOptions, "mailOptions");
   // Send email
   try {
     const info = await transporter.sendMail(mailOptions);

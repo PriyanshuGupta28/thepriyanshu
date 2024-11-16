@@ -229,7 +229,7 @@ export default function Index() {
                     id="name"
                     name="name"
                     ref={nameRef}
-                    className="peer w-full bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500"
+                    className="peer w-full bg-zinc-300  dark:bg-zinc-800 text-black dark:text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500"
                     required
                     placeholder="Full name"
                   />
@@ -241,7 +241,7 @@ export default function Index() {
                     name="email"
                     ref={emailRef}
                     placeholder="Email address"
-                    className="peer w-full bg-zinc-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500"
+                    className="peer w-full bg-zinc-300  dark:bg-zinc-800 text-black dark:text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-500"
                     required
                   />
                 </div>
@@ -252,14 +252,14 @@ export default function Index() {
                   name="message"
                   ref={messageRef}
                   placeholder="Message"
-                  className="peer w-full bg-zinc-800 text-white px-4 py-3 rounded-lg h-40 focus:outline-none focus:ring-2 focus:ring-zinc-500"
+                  className="peer w-full bg-zinc-300  dark:bg-zinc-800 text-black dark:text-white px-4 py-3 rounded-lg h-40 focus:outline-none focus:ring-2 focus:ring-zinc-500"
                   required
                 ></textarea>
               </div>
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-zinc-700 hover:bg-cyan-800 text-white dark:text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-700"
+                  className="bg-zinc-300 dark:bg-zinc-700  text-white dark:text-black font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-700"
                 >
                   <SparklesText
                     text={!isSubmitting ? "Submitting..." : "Submit"}

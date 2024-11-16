@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import React, { useRef } from "react";
-import logo from "~/assets/logo.png";
+import logoLight from "~/assets/logo.png";
+import logoDark from "~/assets/logodark.png";
 interface FooterProps {
   isIntroDone: boolean;
 }
@@ -20,20 +21,28 @@ const Footer: React.FC<FooterProps> = ({ isIntroDone }) => {
         <div className="flex flex-wrap items-center sm:justify-between max-sm:flex-col gap-6">
           <div>
             <Link to="/">
-              <img src={logo} alt="logo" className="w-44" />
+              <img src={logoDark} alt="logo" className="w-44 dark:hidden" />
+              <img
+                src={logoLight}
+                alt="logo"
+                className="w-44 hidden dark:block"
+              />
             </Link>
           </div>
 
           <ul className="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6">
             <li>
-              <Link to="/" className="text-gray-300 hover:underline text-base">
+              <Link
+                to="/"
+                className="text-black dark:text-white hover:underline text-base"
+              >
                 Home
               </Link>
             </li>
             <li>
               <Link
                 to="/resume"
-                className="text-gray-300 hover:underline text-base"
+                className="text-black dark:text-white hover:underline text-base"
               >
                 Resume
               </Link>
@@ -41,14 +50,14 @@ const Footer: React.FC<FooterProps> = ({ isIntroDone }) => {
             <li>
               <Link
                 to="/projects"
-                className="text-gray-300 hover:underline text-base"
+                className="text-black dark:text-white hover:underline text-base"
               >
                 Projects
               </Link>
             </li>
           </ul>
         </div>
-        <p className="text-center text-gray-300 text-base">
+        <p className="text-center text-black dark:text-white text-base">
           © thepriyanshu. All rights reserved.
         </p>
       </div>

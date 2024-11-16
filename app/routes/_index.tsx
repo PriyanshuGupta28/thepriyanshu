@@ -214,8 +214,8 @@ export default function Index() {
               Get in Touch
             </h1>
             <p className="contact-desc text-zinc-400 text-center mt-4">
-              We&apos;d love to hear from you! Fill out the form below and
-              we&apos;ll get back to you as soon as possible.
+              I&apos;d love to hear from you! Fill out the form below and
+              i&apos;ll get back to you as soon as possible.
             </p>
 
             <fetcher.Form

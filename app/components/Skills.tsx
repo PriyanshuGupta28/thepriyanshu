@@ -8,10 +8,14 @@ import {
   SiTypescript,
   SiExpress,
   SiVite,
+  SiMui,
+  SiTailwindcss,
+  SiGithub,
+  SiAntdesign,
 } from "react-icons/si";
 import { TbBrandNextjs, TbBrandRedux } from "react-icons/tb";
 import { RiCss3Fill } from "react-icons/ri";
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaNpm } from "react-icons/fa";
 import { BiLogoMongodb } from "react-icons/bi";
 import { CgVercel } from "react-icons/cg";
 import { LinkPreview } from "./ui/link-preview";
@@ -82,6 +86,31 @@ const Skills: React.FC = () => {
       title: "Vercel",
       icon: <CgVercel className="text-black dark:text-white" />,
       link: "https://vercel.com/",
+    },
+    {
+      title: "Material UI",
+      icon: <SiMui className="text-blue-600 " />,
+      link: "https://mui.com/",
+    },
+    {
+      title: "Tailwind Css",
+      icon: <SiTailwindcss className="text-cyan-400" />,
+      link: "https://tailwindcss.com/",
+    },
+    {
+      title: "Github",
+      icon: <SiGithub className="text-black dark:text-white" />,
+      link: "https://github.com/",
+    },
+    {
+      title: "Npm",
+      icon: <FaNpm className="text-red-600" />,
+      link: "https://www.npmjs.com/",
+    },
+    {
+      title: "Ant Design",
+      icon: <SiAntdesign className="text-blue-500" />,
+      link: "https://ant.design/",
     },
   ];
 

@@ -78,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = ({ isIntroDone, toggleTheme }) => {
         id="hs-offcanvas-right"
         className={`hs-overlay ${
           isOffcanvasOpen ? "translate-x-0" : "translate-x-full hidden"
-        } fixed top-0 end-0 transition-all duration-300 transform ease-in-out h-full border border-l-zinc-500 max-w-xs w-full z-[80] bg-black/80 backdrop-blur-[6px] dark:bg-black/80 dark:border-neutral-700`}
+        } fixed top-0 end-0 transition-all duration-300 transform ease-in-out h-full border border-l-zinc-500 max-w-xs w-full z-[80] bg-black/80 backdrop-blur-[6px] dark:bg-black/80 dark:border-l-neutral-700`}
         role="dialog"
         tabIndex={-1}
         aria-labelledby="hs-offcanvas-right-label"

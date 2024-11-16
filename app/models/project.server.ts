@@ -619,9 +619,5 @@ export function getProjects(): ProjectType[] {
 export async function getOneProject(
   id: number
 ): Promise<ProjectType | undefined> {
-  console.log(
-    id,
-    products.find((product) => product.id === id)
-  );
   return products.find((product) => product.id === id);
 }

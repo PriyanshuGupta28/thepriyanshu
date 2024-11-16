@@ -13,27 +13,37 @@ import { cn } from "~/lib/utils";
 export const FloatingDock = ({
   items,
   desktopClassName,
+  toggleTheme,
 }: {
   items: {
     title: string;
     icon: React.ReactNode;
     href: string;
     target: string;
+    toggleTheme?: () => void;
   }[];
   desktopClassName?: string;
 }) => {
-  return <FloatingDockDesktop items={items} className={desktopClassName} />;
+  return (
+    <FloatingDockDesktop
+      items={items}
+      className={desktopClassName}
+      toggleTheme={toggleTheme}
+    />
+  );
 };
 
 const FloatingDockDesktop = ({
   items,
   className,
+  toggleTheme,
 }: {
   items: {
     title: string;
     icon: React.ReactNode;
     href: string;
     target: string;
+    toggleTheme?: () => void;
   }[];
   className?: string;
 }) => {
@@ -48,7 +58,12 @@ const FloatingDockDesktop = ({
       )}
     >
       {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
+        <IconContainer
+          mouseX={mouseX}
+          key={item.title}
+          {...item}
+          toggleTheme={toggleTheme}
+        />
       ))}
     </motion.div>
   );
@@ -60,6 +75,7 @@ function IconContainer({
   icon,
   href,
   target,
+  toggleTheme,
 }: {
   mouseX: MotionValue;
   title: string;
@@ -115,10 +131,16 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link to={href} target={target} rel="noreferrer" prefetch="intent">
+    <Link
+      to={title === "Toggle Theme" ? "#" : href}
+      target={target}
+      rel="noreferrer"
+      prefetch="intent"
+    >
       <motion.div
         ref={ref}
         style={{ width, height }}
+        onClick={title === "Toggle Theme" ? toggleTheme : undefined}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"

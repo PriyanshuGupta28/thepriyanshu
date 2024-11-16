@@ -37,7 +37,7 @@ export default function ProjectDetails({
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white ">
+          <h1 className="text-3xl md:text-5xl font-bold text-white">
             {projectData?.title}
           </h1>
         </div>

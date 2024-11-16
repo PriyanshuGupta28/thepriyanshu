@@ -7,7 +7,7 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import "./tailwind.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FloatingDockDemo from "./components/FloatingDockDemo";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -48,13 +48,32 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const [isIntroDone, setIsIntroDone] = useState(true);
+  const [theme, setTheme] = useState(() =>
+    typeof window !== "undefined"
+      ? localStorage.getItem("theme") || "dark"
+      : "dark"
+  );
+
+  // Apply the theme class to the HTML element
+  useEffect(() => {
+    document.documentElement.className = theme;
+    localStorage.setItem("theme", theme); // Store the theme in local storage
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
   return (
     <Layout>
-      {isIntroDone && isMobile ? <Navbar isIntroDone={isIntroDone} /> : null}
+      {isIntroDone && isMobile ? (
+        <Navbar isIntroDone={isIntroDone} toggleTheme={toggleTheme} />
+      ) : null}
       <Toaster position="top-center" reverseOrder={false} />
       <Outlet context={{ isIntroDone, setIsIntroDone }} />
       <Footer isIntroDone={isIntroDone} />
-      {!isMobile ? <FloatingDockDemo isIntroDone={isIntroDone} /> : null}
+      {!isMobile ? (
+        <FloatingDockDemo isIntroDone={isIntroDone} toggleTheme={toggleTheme} />
+      ) : null}
     </Layout>
   );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useOutletContext } from "@remix-run/react";
+import { IconDownload } from "@tabler/icons-react";
+import resume from "~/assets/resume.pdf";
 interface ContextType {
   isIntroDone: boolean;
 }
@@ -20,6 +22,20 @@ const HeroSection: React.FC = () => {
           create something amazing!
         </p>
         {/* Know More Button */}
+        {/* <button className="btn btn-primary mt-5 flex items-center">
+          Resume <IconDownload />
+        </button> */}
+        <a href={resume} download="Priyanshu_Gupta_Resume.pdf">
+          <button
+            className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold group mt-5"
+            type="button"
+          >
+            <div className="bg-purple-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500">
+              <IconDownload className="w-5 h-5" />
+            </div>
+            <p className="translate-x-2">Resume</p>
+          </button>
+        </a>
       </div>
 
       {/* Lottie Animation */}

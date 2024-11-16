@@ -27,7 +27,7 @@ export default function ProjectDetails({
   return (
     <div
       ref={containerRef}
-      className="min-h-screen text-zinc-200 py-12 px-4 lg:px-24"
+      className="min-h-screen text-zinc-800 dark:text-zinc-200 py-12 px-4 lg:px-24"
     >
       {/* Hero Section */}
       <div className="relative w-full h-96 overflow-hidden rounded-lg mb-8">
@@ -37,7 +37,7 @@ export default function ProjectDetails({
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white">
+          <h1 className="text-5xl font-bold text-white ">
             {projectData?.title}
           </h1>
         </div>
@@ -45,14 +45,20 @@ export default function ProjectDetails({
 
       {/* Description Section */}
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">About the Project</h2>
+        <h2 className="text-3xl font-bold mb-6 text-zinc-900 dark:text-white">
+          About the Project
+        </h2>
 
         {/* Render each section in the description */}
         {projectData?.description?.map((section, index) => (
           <div key={index} className="mb-8">
-            <h3 className="text-2xl font-semibold mb-4">{section?.title}</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-black dark:text-white">
+              {section?.title}
+            </h3>
             {section?.content && (
-              <p className="text-lg leading-relaxed mb-4">{section?.content}</p>
+              <p className="text-lg leading-relaxed mb-4 text-black dark:text-white">
+                {section?.content}
+              </p>
             )}
             {section?.list && (
               <ul className="list-disc list-inside ml-4 space-y-2">
@@ -65,7 +71,9 @@ export default function ProjectDetails({
         ))}
 
         {/* Technologies Used */}
-        <h3 className="text-2xl font-semibold mb-4">Technologies Used</h3>
+        <h3 className="text-2xl font-semibold mb-4 text-black dark:text-white">
+          Technologies Used
+        </h3>
         <div className="flex flex-wrap gap-3 mb-8">
           {projectData?.techstack.map((tech, index) => (
             <span

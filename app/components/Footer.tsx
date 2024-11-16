@@ -32,26 +32,18 @@ const Footer: React.FC<FooterProps> = ({ isIntroDone }) => {
             </li>
             <li>
               <Link
-                to="/about"
+                to="/resume"
                 className="text-gray-300 hover:underline text-base"
               >
-                About
+                Resume
               </Link>
             </li>
             <li>
               <Link
-                to="/services"
+                to="/projects"
                 className="text-gray-300 hover:underline text-base"
               >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="text-gray-300 hover:underline text-base"
-              >
-                Contact
+                Projects
               </Link>
             </li>
           </ul>

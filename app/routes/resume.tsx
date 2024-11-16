@@ -59,7 +59,9 @@ const Resume: React.FC = () => {
 
       {/* Summary Section */}
       <div ref={(el) => (sectionsRef.current[0] = el)} className="my-10">
-        <h2 className="text-3xl font-bold mb-4">Summary</h2>
+        <h2 className="text-3xl font-bold mb-4 text-gray-700 dark:text-gray-300">
+          Summary
+        </h2>
         <p className="text-gray-700 dark:text-gray-300">
           Highly skilled Frontend Developer with over 2 years of hands-on
           experience in building responsive, dynamic web applications using
@@ -70,7 +72,7 @@ const Resume: React.FC = () => {
       {/* Experience Section */}
       <div className="my-10">
         <h2
-          className="text-3xl font-bold mb-4"
+          className="text-3xl font-bold mb-4 text-gray-700 dark:text-gray-300"
           ref={(el) => (sectionsRef.current[1] = el)}
         >
           Experience
@@ -196,7 +198,9 @@ const Resume: React.FC = () => {
 
       {/* Education Section */}
       <div ref={(el) => (sectionsRef.current[5] = el)} className="my-10">
-        <h2 className="text-3xl font-bold mb-4">Education</h2>
+        <h2 className="text-3xl font-bold mb-4 text-gray-700 dark:text-gray-300">
+          Education
+        </h2>
         <p className="text-gray-700 dark:text-gray-300">
           <span className="font-semibold">
             Patliputra University | Patna, Bihar
@@ -208,7 +212,9 @@ const Resume: React.FC = () => {
 
       {/* Skills Section */}
       <div ref={(el) => (sectionsRef.current[6] = el)} className="my-10">
-        <h2 className="text-3xl font-bold mb-4">Skills</h2>
+        <h2 className="text-3xl font-bold mb-4 text-gray-700 dark:text-gray-300">
+          Skills
+        </h2>
         <p className="text-gray-700 dark:text-gray-300">
           HTML5, CSS3, JavaScript, React.js, Next.js, TypeScript, Redux, Sass,
           Tailwind CSS, GitHub, Material-UI, Ant Design

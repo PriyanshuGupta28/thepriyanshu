@@ -51,7 +51,6 @@ export async function action({ request }: ActionFunctionArgs) {
 
 export default function Index() {
   const comp = useRef(null);
-  const action = useActionData();
   const { setIsIntroDone, isIntroDone } = useOutletContext<ContextType>();
 
   useEffect(() => {
@@ -65,7 +64,6 @@ export default function Index() {
     }
   }, [isIntroDone]);
 
-  console.log(action, "action");
   const handleStates = () => {
     setIsIntroDone(true);
     sessionStorage.setItem("isIntroLoaded", "1");
@@ -112,7 +110,6 @@ export default function Index() {
   }, []);
   const fetcher = useFetcher();
 
-  // Refs for each input
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);

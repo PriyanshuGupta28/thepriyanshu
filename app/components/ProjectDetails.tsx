@@ -78,40 +78,51 @@ export default function ProjectDetails({
         </div>
 
         {/* Image Gallery */}
-        <h3 className="text-2xl font-semibold mb-4">Image Gallery</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {projectData?.image.map((image, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden rounded-lg shadow-lg"
-            >
-              <img
-                src={image}
-                alt={`${projectData?.title} image ${index + 1}`}
-                className="w-full h-64 object-cover transform transition duration-300 hover:scale-105"
-              />
+        {projectData?.image && projectData?.image.length > 0 ? (
+          <>
+            <h3 className="text-2xl font-semibold mb-4">Image Gallery</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-8">
+              {projectData?.image.map((image, index) => (
+                <div
+                  key={index}
+                  className="relative overflow-hidden rounded-lg shadow-lg"
+                >
+                  <img
+                    src={image}
+                    alt={`${projectData?.title} image ${index + 1}`}
+                    className="w-full h-64 object-cover transform transition duration-300 hover:scale-105"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        ) : null}
 
         {/* Call to Action Buttons */}
         <div className="flex gap-4 justify-center">
-          <a
-            href={projectData?.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-500 transition duration-300"
-          >
-            View Live
-          </a>
-          <a
-            href={projectData?.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300"
-          >
-            View on GitHub
-          </a>
+          {projectData?.link !== undefined && (
+            <>
+              <a
+                href={projectData?.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-500 transition duration-300"
+              >
+                View Live
+              </a>
+            </>
+          )}
+
+          {projectData?.github !== undefined && (
+            <a
+              href={projectData?.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-700 transition duration-300"
+            >
+              View on GitHub
+            </a>
+          )}
         </div>
       </div>
     </div>

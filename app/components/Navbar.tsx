@@ -2,14 +2,15 @@ import React, { useRef, useState } from "react";
 // eslint-disable-next-line import/no-named-as-default
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { IconMenu3 } from "@tabler/icons-react";
+import { IconMenu3, IconSun } from "@tabler/icons-react";
 import logo from "~/assets/logo.png";
 import { Link, useNavigate } from "@remix-run/react";
 interface NavbarProps {
   isIntroDone: boolean;
+  toggleTheme: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isIntroDone }) => {
+const Navbar: React.FC<NavbarProps> = ({ isIntroDone, toggleTheme }) => {
   const navRef = useRef(null);
   const navigate = useNavigate();
 
@@ -34,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ isIntroDone }) => {
     <>
       <div
         ref={navRef}
-        className="bg-black/40 backdrop-blur-[6px] border border-zinc-300/20 text-zinc-600 container mx-auto w-[90%] top-2 z-20 sticky box-border py-1 rounded-[50px]"
+        className="bg-black/40 backdrop-blur-[6px] border border-zinc-400 dark:border-zinc-500 text-zinc-600 container mx-auto w-[90%] top-2 z-20 sticky box-border py-1 rounded-[50px]"
         style={{ opacity: 0 }}
       >
         <div className="container flex justify-between mx-auto w-full px-5">
@@ -47,16 +48,29 @@ const Navbar: React.FC<NavbarProps> = ({ isIntroDone }) => {
             />
           </div>
 
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-md focus:outline-none"
-            aria-haspopup="dialog"
-            aria-expanded={isOffcanvasOpen}
-            aria-controls="hs-offcanvas-right"
-            onClick={toggleOffcanvas}
-          >
-            <IconMenu3 className="h-9 w-9 text-zinc-50" />
-          </button>
+          <div className="flex gap-4 items-center">
+            {/* Theme Toggle */}
+            <div
+              className="relative flex items-center justify-center h-10 w-10 cursor-pointer rounded-full bg-zinc-800 hover:bg-zinc-700 transition-colors duration-200 group"
+              onClick={toggleTheme}
+            >
+              <IconSun className="h-6 w-6 text-yellow-300 group-hover:scale-110 transition-transform duration-200" />
+              <div className="absolute inset-0 rounded-full ring-2 ring-yellow-400 ring-opacity-50 animate-pulse opacity-0 group-hover:opacity-100"></div>
+            </div>
+
+            {/* Offcanvas Menu Button */}
+            <button
+              type="button"
+              className="relative flex items-center justify-center h-10 w-10 cursor-pointer rounded-full bg-zinc-800 hover:bg-zinc-700 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-white"
+              aria-haspopup="dialog"
+              aria-expanded={isOffcanvasOpen}
+              aria-controls="hs-offcanvas-right"
+              onClick={toggleOffcanvas}
+            >
+              <IconMenu3 className="h-6 w-6 text-zinc-50 group-hover:scale-110 transition-transform duration-200" />
+              <div className="absolute inset-0 rounded-full ring-2 ring-white ring-opacity-50 animate-pulse opacity-0 group-hover:opacity-100"></div>
+            </button>
+          </div>
         </div>
       </div>
 

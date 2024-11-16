@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({ isIntroDone }) => {
             aria-controls="hs-offcanvas-right"
             onClick={toggleOffcanvas}
           >
-            <IconMenu3 className="h-6 w-6 text-zinc-50" />
+            <IconMenu3 className="h-9 w-9 text-zinc-50" />
           </button>
         </div>
       </div>
@@ -69,7 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({ isIntroDone }) => {
         tabIndex={-1}
         aria-labelledby="hs-offcanvas-right-label"
       >
-        <div className="flex justify-end items-center py-3 px-4 border-b dark:border-neutral-700">
+        <div className="flex justify-end items-center py-3 px-4">
           <button
             type="button"
             className="size-8 inline-flex justify-center items-center gap-x-2 rounded-full border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600"

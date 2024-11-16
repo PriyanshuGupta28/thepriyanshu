@@ -3,12 +3,7 @@ import type { ActionFunctionArgs, MetaFunction } from "@remix-run/node";
 // eslint-disable-next-line import/no-named-as-default
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
-import {
-  json,
-  useActionData,
-  useFetcher,
-  useOutletContext,
-} from "@remix-run/react";
+import { json, useFetcher, useOutletContext } from "@remix-run/react";
 import Timeline from "~/components/Timeline";
 import HeroSection from "~/components/HeroSection";
 import Skills from "~/components/Skills";
@@ -19,7 +14,6 @@ import { SparklesText } from "~/components/ui/SparklesText";
 import { sendMail } from "~/utils/email";
 import { showErrorToast, showSuccessToast } from "~/utils/toast";
 
-// Define the context type
 interface ContextType {
   isIntroDone: boolean;
   setIsIntroDone: (value: boolean) => void;

@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
         </button> */}
         <a href={resume} download="Priyanshu_Gupta_Resume.pdf">
           <button
-            className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold group mt-5"
+            className="bg-black dark:bg-zinc-50 text-center w-48 rounded-2xl h-14 relative text-white dark:text-black text-xl font-semibold group mt-5"
             type="button"
           >
             <div className="bg-purple-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500">

@@ -71,7 +71,7 @@ export default function App() {
       <Toaster position="top-center" reverseOrder={false} />
       <Outlet context={{ isIntroDone, setIsIntroDone }} />
       <Footer isIntroDone={isIntroDone} />
-      {!isMobile ? (
+      {isIntroDone && !isMobile ? (
         <FloatingDockDemo isIntroDone={isIntroDone} toggleTheme={toggleTheme} />
       ) : null}
     </Layout>

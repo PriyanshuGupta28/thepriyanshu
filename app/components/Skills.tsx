@@ -25,7 +25,7 @@ const Skills: React.FC = () => {
     },
     {
       title: "Next.js",
-      icon: <TbBrandNextjs className="text-white" />,
+      icon: <TbBrandNextjs className="text-black dark:text-white" />,
       link: "https://nextjs.org/",
     },
     {
@@ -60,7 +60,7 @@ const Skills: React.FC = () => {
     },
     {
       title: "Express",
-      icon: <SiExpress className="text-white" />,
+      icon: <SiExpress className="text-black dark:text-white" />,
       link: "https://expressjs.com/",
     },
     {
@@ -80,7 +80,7 @@ const Skills: React.FC = () => {
     },
     {
       title: "Vercel",
-      icon: <CgVercel className="text-white" />,
+      icon: <CgVercel className="text-black dark:text-white" />,
       link: "https://vercel.com/",
     },
   ];
@@ -98,9 +98,6 @@ const Skills: React.FC = () => {
 
   return (
     <div className="container mx-auto py-12 flex flex-col items-center">
-      <h2 className="text-4xl font-bold text-center mb-8 text-zinc-100">
-        Skills
-      </h2>
       <Flipper flipKey={items.map((item) => item.title).join("")}>
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-6 w-full">
           {items.map((item) => (
@@ -109,7 +106,7 @@ const Skills: React.FC = () => {
                 <LinkPreview url={item.link}>
                   <div className="text-4xl mb-2">{item.icon}</div>
                 </LinkPreview>
-                <h3 className="text-lg font-semibold text-zinc-100 text-center">
+                <h3 className="text-lg font-semibold text-black dark:text-zinc-50 text-center">
                   {item.title}
                 </h3>
               </div>

@@ -4,13 +4,14 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { IconMenu3 } from "@tabler/icons-react";
 import logo from "~/assets/logo.png";
-import { Link } from "@remix-run/react";
+import { Link, useNavigate } from "@remix-run/react";
 interface NavbarProps {
   isIntroDone: boolean;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isIntroDone }) => {
   const navRef = useRef(null);
+  const navigate = useNavigate();
 
   useGSAP(() => {
     if (isIntroDone) {
@@ -33,12 +34,17 @@ const Navbar: React.FC<NavbarProps> = ({ isIntroDone }) => {
     <>
       <div
         ref={navRef}
-        className="bg-black/40 backdrop-blur-[6px] border border-zinc-300/20 text-zinc-600 container mx-auto w-[90%] top-2 z-20 sticky box-border py-5 rounded-[50px]"
+        className="bg-black/40 backdrop-blur-[6px] border border-zinc-300/20 text-zinc-600 container mx-auto w-[90%] top-2 z-20 sticky box-border py-1 rounded-[50px]"
         style={{ opacity: 0 }}
       >
         <div className="container flex justify-between mx-auto w-full px-5">
           <div className="">
-            <img src={logo} alt="logo" className="w-10" />
+            <img
+              src={logo}
+              alt="logo"
+              className="h-16 w-16"
+              onClick={() => navigate("/")}
+            />
           </div>
 
           <button

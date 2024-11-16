@@ -165,6 +165,11 @@ export default function Index() {
       >
         <HeroSection />
         <TextRevealByWord text="Hi, my name is Priyanshu Gupta. I am a passionate web developer with expertise in building responsive and dynamic web applications. My work focuses on creating user-centric designs with seamless functionality. I'm continuously learning and evolving in the field of technology." />
+        <AnimatedDivider
+          alignment="center"
+          text="Skills"
+          textClassName="text-3xl font-bold"
+        />
         <Skills />
       </div>
 
@@ -202,7 +207,10 @@ export default function Index() {
         />
         <div className="min-h-screen flex justify-center items-center p-6">
           <div className="max-w-4xl w-full">
-            <h1 className="contact-title text-5xl font-bold text-white text-center">
+            <h1
+              className="contact-title text-5xl font-bold text-black dark:text-white
+             text-center"
+            >
               Get in Touch
             </h1>
             <p className="contact-desc text-zinc-400 text-center mt-4">
@@ -251,10 +259,11 @@ export default function Index() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-zinc-700 hover:bg-cyan-800 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-700"
+                  className="bg-zinc-700 hover:bg-cyan-800 text-white dark:text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-700"
                 >
                   <SparklesText
                     text={!isSubmitting ? "Submitting..." : "Submit"}
+                    // className="text-black dark:text-white"
                   />
                 </button>
               </div>

@@ -2,15 +2,16 @@ import React, { useRef, useState } from "react";
 // eslint-disable-next-line import/no-named-as-default
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { IconMenu3, IconSun } from "@tabler/icons-react";
+import { IconMenu3, IconSun, IconMoon } from "@tabler/icons-react";
 import logo from "~/assets/logo.png";
 import { Link, useNavigate } from "@remix-run/react";
 interface NavbarProps {
   isIntroDone: boolean;
   toggleTheme: () => void;
+  theme: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ isIntroDone, toggleTheme }) => {
+const Navbar: React.FC<NavbarProps> = ({ isIntroDone, toggleTheme, theme }) => {
   const navRef = useRef(null);
   const navigate = useNavigate();
 
@@ -54,8 +55,14 @@ const Navbar: React.FC<NavbarProps> = ({ isIntroDone, toggleTheme }) => {
               className="relative flex items-center justify-center h-10 w-10 cursor-pointer rounded-full bg-zinc-800 hover:bg-zinc-700 transition-colors duration-200 group"
               onClick={toggleTheme}
             >
-              <IconSun className="h-6 w-6 text-yellow-300 group-hover:scale-110 transition-transform duration-200" />
-              <div className="absolute inset-0 rounded-full ring-2 ring-yellow-400 ring-opacity-50 animate-pulse opacity-0 group-hover:opacity-100"></div>
+              {theme === "dark" ? (
+                <>
+                  <IconSun className="h-6 w-6 text-yellow-300 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="absolute inset-0 rounded-full ring-2 ring-yellow-400 ring-opacity-50 animate-pulse opacity-0 group-hover:opacity-100"></div>
+                </>
+              ) : (
+                <IconMoon className="h-6 w-6 text-zinc-50 group-hover:scale-110 transition-transform duration-200" />
+              )}
             </div>
 
             {/* Offcanvas Menu Button */}

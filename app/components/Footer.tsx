@@ -2,9 +2,11 @@ import { Link } from "@remix-run/react";
 import React, { useRef } from "react";
 import logoLight from "~/assets/logo.png";
 import logoDark from "~/assets/logodark.png";
+
 interface FooterProps {
   isIntroDone: boolean;
 }
+
 const Footer: React.FC<FooterProps> = ({ isIntroDone }) => {
   const footerRef = useRef();
   return (
@@ -57,7 +59,21 @@ const Footer: React.FC<FooterProps> = ({ isIntroDone }) => {
             </li>
           </ul>
         </div>
-        <p className="text-center text-black dark:text-white text-base">
+
+        <p className="text-center text-black dark:text-white text-base mt-8">
+          Made with <span className="text-red-500">❤️</span> Remix + Tailwind
+          CSS by{" "}
+          <a
+            href="https://github.com/PriyanshuGupta28"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            Priyanshu Gupta
+          </a>
+        </p>
+
+        <p className="text-center text-black dark:text-white text-base mt-4">
           © thepriyanshu. All rights reserved.
         </p>
       </div>

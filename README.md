@@ -1,7 +1,7 @@
 <h1 align="center">✨ The Priyanshu Portfolio ✨</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/PriyanshuGupta28/thepriyanshu/refs/heads/main/public/ThePriyanshu.png" alt="Website Preview" style="max-width: 100%; border-radius: 10px;" />
+   <img src="https://github.com/user-attachments/assets/dd407a7d-ed5a-4701-beba-5d54863f3bdd" alt="Website GIF Preview" style="max-width: 100%; border-radius: 10px;" />
 </p>
 
 <p align="center">
@@ -34,9 +34,9 @@
 ---
 
 <h2>📸 Website Preview</h2>
-<p>*(Replace this text with your image)*</p>
-<p>Include a screenshot or GIF of your website here.</p>
-![ThePriyanshugif](https://github.com/user-attachments/assets/dd407a7d-ed5a-4701-beba-5d54863f3bdd)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dd407a7d-ed5a-4701-beba-5d54863f3bdd" alt="Website GIF Preview" style="max-width: 100%; border-radius: 10px;" />
+</p>
 
 ---
 

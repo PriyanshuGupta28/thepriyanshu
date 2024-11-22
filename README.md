@@ -1,7 +1,7 @@
 <h1 align="center">✨ The Priyanshu Portfolio ✨</h1>
 
 <p align="center">
-  <img src="./path-to-your-image.png" alt="Website Preview" style="max-width: 100%; border-radius: 10px;" />
+  <img src="https://raw.githubusercontent.com/PriyanshuGupta28/thepriyanshu/refs/heads/main/public/ThePriyanshu.png" alt="Website Preview" style="max-width: 100%; border-radius: 10px;" />
 </p>
 
 <p align="center">

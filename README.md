@@ -62,7 +62,7 @@
 ---
 
 <h2>📜 License</h2>
-<p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
+<p>This project is licensed under the <a href="https://opensource.org/license/mit">MIT License</a>.</p>
 
 ---
 

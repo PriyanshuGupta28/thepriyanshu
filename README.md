@@ -68,7 +68,7 @@
 
 <h2>🌐 Connect with Me</h2>
 <ul>
-  <li><a href="https://github.com/your-github-profile" target="_blank">GitHub</a></li>
+  <li><a href="https://github.com/PriyanshuGupta28" target="_blank">GitHub</a></li>
   <li><a href="https://linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a></li>
 </ul>
 

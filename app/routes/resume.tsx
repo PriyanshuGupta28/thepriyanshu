@@ -81,7 +81,7 @@ const Resume: React.FC = () => {
         {/* Job 1: Bapa sita innovation and technologies */}
         <div className="mb-8" ref={(el) => (sectionsRef.current[2] = el)}>
           <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-            Front End Developer
+            Full-Stack Developer
           </h3>
           <p className="text-gray-500 dark:text-neutral-400">
             Bapa sita innovation and technologies | Gujarat, Vadodara
@@ -165,7 +165,7 @@ const Resume: React.FC = () => {
             Echnotech Pvt Ltd | Karnataka, Bangalore
           </p>
           <p className="text-gray-500 dark:text-neutral-400">
-            01/2023 - 06/2023
+            04/2022 - 06/2023
           </p>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 space-y-1">
             <li>
@@ -216,8 +216,9 @@ const Resume: React.FC = () => {
           Skills
         </h2>
         <p className="text-gray-700 dark:text-gray-300">
-          HTML5, CSS3, JavaScript, React.js, Next.js, TypeScript, Redux, Sass,
-          Tailwind CSS, GitHub, Material-UI, Ant Design
+          HTML5, CSS3, JavaScript, React.js, Next.js, Remix.js, TypeScript,
+          Redux, Sass, Tailwind CSS, Express.js, Node.js , MongoDb , GitHub,
+          Material-UI, Ant Design UI, GSAP Animation, Framer Motion.
         </p>
       </div>
     </div>

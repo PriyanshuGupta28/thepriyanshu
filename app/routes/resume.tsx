@@ -63,9 +63,19 @@ const Resume: React.FC = () => {
           Summary
         </h2>
         <p className="text-gray-700 dark:text-gray-300">
-          Highly skilled Frontend Developer with over 2 years of hands-on
-          experience in building responsive, dynamic web applications using
-          modern technologies like React.js, Next.js, TypeScript, and Redux...
+          Self-driven Software Engineer with 3 years of hands-on expertise
+          creating high-performance, user-centric web solutions. Proficient in
+          React.js, Next.js, and TypeScript, having built robust, role-based
+          solar management platforms and comprehensive eCommerce applications.
+          Recognized for crafting advanced UI components, boosting SEO, and
+          streamlining performance to satisfy business objectives. Dedicated to
+          translating intricate requirements into efficient, maintainable code
+          while collaborating effectively with cross-functional teams.
+          <br /> Beyond professional engagements, I have undertaken personal
+          initiatives that highlight creativity and technical aptitude. These
+          projects range from building interactive dashboards with real-time
+          data to experimenting with modern libraries—all aimed at refining
+          workflows and delivering impactful results.
         </p>
       </div>
 

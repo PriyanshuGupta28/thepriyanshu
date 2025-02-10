@@ -71,11 +71,11 @@ const Resume: React.FC = () => {
           streamlining performance to satisfy business objectives. Dedicated to
           translating intricate requirements into efficient, maintainable code
           while collaborating effectively with cross-functional teams.
-          <br /> Beyond professional engagements, I have undertaken personal
-          initiatives that highlight creativity and technical aptitude. These
-          projects range from building interactive dashboards with real-time
-          data to experimenting with modern libraries—all aimed at refining
-          workflows and delivering impactful results.
+          <br /> <br /> Beyond professional engagements, I have undertaken
+          personal initiatives that highlight creativity and technical aptitude.
+          These projects range from building interactive dashboards with
+          real-time data to experimenting with modern libraries—all aimed at
+          refining workflows and delivering impactful results.
         </p>
       </div>
 
